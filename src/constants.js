@@ -13,7 +13,7 @@
 ];
 
 const features = [
-  "Personalized learning tracks",
+  "personalized learning tracks",
   "100% placement guarantee",
   "one to one mentorship",
   "skill based profile creation",
@@ -21,6 +21,7 @@ const features = [
   "paid internship",
   "certification programme",
   "corporate training",
+  "skill oriented training"
 ];
 
 export default {logos,features}

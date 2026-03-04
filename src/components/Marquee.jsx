@@ -18,10 +18,10 @@ const Marquee = () => {
     { scope: trackRef },
   );
   return (
-    <div className="overflow-hidden w-full py-10 ">
+    <div className="overflow-hidden border-t-[0.1vh] border-b-[0.1vh] w-full py-10 ">
       <div
         ref={trackRef}
-        className="flex gap-25  items-center h-45 w-max opacity-55 "
+        className="flex gap-25  items-center h-20 w-max opacity-55 "
       >
         {logos
           ? [...logos, ...logos].map((logo, idx) => {
