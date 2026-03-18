@@ -19,14 +19,14 @@ const AboutSection = () => {
 
       gsap.from(".percent", {
         innerText: 0 + "%",
-        duration: 0.7,
+        duration: 1,
         snap: {
           innerText: 10,
         },
       });
       gsap.from(".count", {
         innerText: 0,
-        duration: 0.7,
+        duration: 1,
         snap: {
           innerText: 5,
         },

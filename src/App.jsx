@@ -2,6 +2,7 @@ import AboutSection from "./sections/AboutSection"
 import Courses from "./sections/Courses"
 import HeroSection from "./sections/HeroSection"
 import Placements from "./sections/Placements"
+import QnASection from "./sections/QnASection"
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
         <AboutSection />
         <Placements />
         <Courses />
+        <QnASection />
       </div>
     </>
   )
