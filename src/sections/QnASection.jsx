@@ -26,7 +26,7 @@ const QnASection = () => {
       gsap.from(".ans-cont", {
         opacity: 0,
         y: -20,
-        duration: 1,
+        duration: 0.6,
         ease: "power2.out",
       });
     }
@@ -51,7 +51,7 @@ const QnASection = () => {
   };
 
   return (
-    <section className="min-h-screen text-[#ffffff] w-full flex flex-col  mt-52 gap-36">
+    <section className="min-h-screen mb-44 text-[#ffffff] w-full flex flex-col  mt-52 gap-36">
       <header
         ref={titleRef}
         className="section-header text-center  text-7xl font-[NeueMachina]"
@@ -61,16 +61,19 @@ const QnASection = () => {
         </h2>
         <h2>Students</h2>
       </header>
-      <main ref={queRef} className="wrapper flex flex-col gap-7">
+      <main ref={queRef} className="wrapper flex flex-col gap-7 h-1/2">
         {faqData.map(({ question, answer, id }) => {
           return (
             <div
               key={id}
-              className="que-cont flex flex-col items-center pl-10 pr-10"
+              className="que-cont  flex flex-col items-center pl-10 pr-10"
               onClick={() => handleSelected(id)}
             >
               <div className="flex justify-between">
-                <h2 className="border-2 text-[4vh] text-center font-[ManropeVariable] p-4 rounded-3xl w-5xl">
+                <h2
+                  className="border-2 bg-white/5 backdrop-blur-lg  hover:bg-white/10
+        hover:border-white/20 text-[4vh] text-center font-[ManropeVariable] p-4 rounded-3xl w-5xl"
+                >
                   {question}
                 </h2>
               </div>
