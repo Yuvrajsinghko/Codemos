@@ -4,8 +4,8 @@ import HeroSection from "./sections/HeroSection"
 const App = () => {
   return (
     <>
-    <HeroSection />
-    <AboutSection />
+      <HeroSection />
+      <AboutSection />
     </>
   )
 }
