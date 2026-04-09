@@ -1,4 +1,4 @@
- const logos = [
+const logos = [
   "/logos/appointy-Logo.svg",
   "/logos/calsoft-logo.png",
   "/logos/cognam-logo.png",
