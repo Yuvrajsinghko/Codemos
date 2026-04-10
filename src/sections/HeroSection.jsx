@@ -43,7 +43,9 @@ const HeroSection = () => {
 		>
             <Navbar />
 			<div className="flex-1 flex flex-col justify-center items-center text-center text-white">
-				
+				{/* <h1>
+                    LEARN.BUILD.GETPLACED
+                </h1> */}
 				<h1 className="hero-heading text-4xl md:text-7xl font-[NeueMachina] tracking-wider">
 					We Don’t Teach Courses.
 				</h1>
