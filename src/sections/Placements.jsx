@@ -14,18 +14,67 @@ const Placements = () => {
 
 	// all students data
 	const placements = [
-		{ name: "Anil Gehlot", img: "", logo: "https://via.placeholder.com/80" },
-		{ name: "Paritosh Verma", img: "", logo: "https://via.placeholder.com/80" },
-		{ name: "Palak Rathi", img: "", logo: "https://via.placeholder.com/80" },
-		{ name: "Nadeem Khan", img: "", logo: "https://via.placeholder.com/80" },
-		{ name: "Shubham Raikwar", img: "", logo: "https://via.placeholder.com/80" },
-		{ name: "Shashank Sharma", img: "", logo: "https://via.placeholder.com/80" },
-		{ name: "Gurpreet Kaur", img: "", logo: "https://via.placeholder.com/80" },
-		{ name: "Kapil Malviya", img: "", logo: "https://via.placeholder.com/80" },
-		{ name: "Ashish Parmar", img: "", logo: "https://via.placeholder.com/80" },
-		{ name: "Samarth Sharma", img: "", logo: "https://via.placeholder.com/80" },
-		{ name: "Vinayak Singoriya", img: "", logo: "https://via.placeholder.com/80" },
-		{ name: "Lokesh Dangi", img: "", logo: "https://via.placeholder.com/80" },
+		{
+            name: "Anil Gehlot", 
+            img: "/images/students/anil.png", 
+            logo: "https://via.placeholder.com/80" 
+        },
+        {
+            name: "Paritosh Verma", 
+            img: "/images/students/paritosh.png", 
+            logo: "https://via.placeholder.com/80" 
+        },
+        {
+            name: "Palak Rathi", 
+            img: "/images/students/palak.png", 
+            logo: "https://via.placeholder.com/80" 
+        },
+        {
+            name: "Nadeem Khan", 
+            img: "/images/students/nadeem.png", 
+            logo: "https://via.placeholder.com/80" 
+        },
+        {
+            name: "Shubham Raikwar", 
+            img: "/images/students/shubham.png", 
+            logo: "https://via.placeholder.com/80" 
+        },
+        {
+            name: "Shashank Sharma", 
+            img: "/images/students/shashank.png", 
+            logo: "https://via.placeholder.com/80" 
+        },
+        {
+            name: "Gurpreet Kaur", 
+            img: "/images/students/gurpreet.png", 
+            logo: "https://via.placeholder.com/80" 
+        },
+        {
+            name: "Kapil Malviya", 
+            img: "/images/students/kapil.png", 
+            logo: "https://via.placeholder.com/80" 
+        },
+        {
+            name: "Ashish Parmar", 
+            img: "/images/students/ashish.png", 
+            logo: "https://via.placeholder.com/80" 
+        },
+        {
+            name: "Samarth Sharma", 
+            img: "/images/students/samarth.png", 
+            logo: "https://via.placeholder.com/80" 
+        },
+        {
+            name: "Vinayak Singoriya", 
+            img: "/images/students/vinayak.png", 
+            logo: "https://via.placeholder.com/80" 
+        },
+        {
+            name: "Lokesh Dangi", 
+            img: "/images/students/lokesh.png", 
+            logo: "https://via.placeholder.com/80" 
+        },
+		
 	];
 
 	// splitting into two rows of 6 each
@@ -83,9 +132,13 @@ const Placements = () => {
 	const Card = ({ item }) => (
 		<div className="min-w-[250px] bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col items-center text-center backdrop-blur-lg transition duration-300 hover:shadow-[0_10px_25px_rgba(251,191,36,0.25)] hover:border-amber-400">
 
-			<div className="w-12 h-12 bg-white/10 rounded-full mb-4"></div>
+            <div className="w-12 h-12 bg-white/10 rounded-full mb-4"></div>
 
-			<div className="w-20 h-20 bg-white/20 rounded-full mb-4"></div>
+			<img
+                src={item.img}
+                alt={item.name}
+                className="w-35 h-35 rounded-full object-cover mb-4  border-none"
+            />
 
 			<div className="mt-4 text-center">
 				<p className="text-lg font-semibold">{item.name}</p>
