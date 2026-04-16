@@ -19,14 +19,14 @@ const AboutSection = () => {
 
       gsap.from(".percent", {
         innerText: 0 + "%",
-        duration: 0.7,
+        duration: 1,
         snap: {
           innerText: 10,
         },
       });
       gsap.from(".count", {
         innerText: 0,
-        duration: 0.7,
+        duration: 1,
         snap: {
           innerText: 5,
         },
@@ -93,7 +93,7 @@ const AboutSection = () => {
 
         <div className="stats flex justify-around px-10 mt-52">
           <div
-            className="bg-white/5 backdrop-blur-lg border p-6 border-white/10 rounded-2xl text-white
+            className="bg-white/5 border-white/10  backdrop-blur-lg border p-6 border-white/10 rounded-2xl text-white
         transition-colors duration-300
         hover:bg-white/10
         hover:border-white/20
