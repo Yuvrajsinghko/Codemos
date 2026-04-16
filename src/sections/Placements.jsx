@@ -17,62 +17,62 @@ const Placements = () => {
 		{
             name: "Anil Gehlot", 
             img: "/images/students/anil.png", 
-            logo: "https://via.placeholder.com/80" 
+            logo: "/logos/enqurious-logo.png" 
         },
         {
             name: "Paritosh Verma", 
             img: "/images/students/paritosh.png", 
-            logo: "https://via.placeholder.com/80" 
+            logo: "/logos/fico-logo.png" 
         },
         {
             name: "Palak Rathi", 
             img: "/images/students/palak.png", 
-            logo: "https://via.placeholder.com/80" 
+            logo: "/logos/tech-mahindra-logo.svg" 
         },
         {
             name: "Nadeem Khan", 
             img: "/images/students/nadeem.png", 
-            logo: "https://via.placeholder.com/80" 
+            logo: "/logos/valueLab-logo.svg" 
         },
         {
             name: "Shubham Raikwar", 
             img: "/images/students/shubham.png", 
-            logo: "https://via.placeholder.com/80" 
+            logo: "/logos/aumiqx-logo.png" 
         },
         {
             name: "Shashank Sharma", 
             img: "/images/students/shashank.png", 
-            logo: "https://via.placeholder.com/80" 
+            logo: "/logos/moengage-logo.svg" 
         },
         {
             name: "Gurpreet Kaur", 
             img: "/images/students/gurpreet.png", 
-            logo: "https://via.placeholder.com/80" 
+            logo: "/logos/gamaEdge-logo.png" 
         },
         {
             name: "Kapil Malviya", 
             img: "/images/students/kapil.png", 
-            logo: "https://via.placeholder.com/80" 
+            logo: "/logos/infinix-1.svg" 
         },
         {
             name: "Ashish Parmar", 
             img: "/images/students/ashish.png", 
-            logo: "https://via.placeholder.com/80" 
+            logo: "/logos/calsoft-logo.png" 
         },
         {
             name: "Samarth Sharma", 
             img: "/images/students/samarth.png", 
-            logo: "https://via.placeholder.com/80" 
+            logo: "/logos/data-genie-logo.png" 
         },
         {
             name: "Vinayak Singoriya", 
             img: "/images/students/vinayak.png", 
-            logo: "https://via.placeholder.com/80" 
+            logo: "/logos/cognam-logo.png" 
         },
         {
             name: "Lokesh Dangi", 
             img: "/images/students/lokesh.png", 
-            logo: "https://via.placeholder.com/80" 
+            logo: "" 
         },
 		
 	];
@@ -130,9 +130,17 @@ const Placements = () => {
 
 	// single card component
 	const Card = ({ item }) => (
-		<div className="min-w-[250px] bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col items-center text-center backdrop-blur-lg transition duration-300 hover:shadow-[0_10px_25px_rgba(251,191,36,0.25)] hover:border-amber-400">
+		<div className="min-w-[250px] bg-white/5 border border-white/80 rounded-2xl p-6 flex flex-col items-center text-center transition duration-300 hover:shadow-[0_10px_25px_rgba(251,191,36,0.25)] hover:border-amber-500 shadow-amber-300/40">
 
-            <div className="w-12 h-12 bg-white/10 rounded-full mb-4"></div>
+            <div className="flex items-center gap-2 mb-4">
+                <p className="text-md text-white/60">Placed at</p>
+                <img
+                    className="w-10 h-10 object-contain"
+                    src={item.logo}
+                    alt="company logo"
+                    
+                />
+            </div>
 
 			<img
                 src={item.img}
@@ -142,8 +150,6 @@ const Placements = () => {
 
 			<div className="mt-4 text-center">
 				<p className="text-lg font-semibold">{item.name}</p>
-				<p className="text-sm text-white/60 mt-1">Placed at</p>
-				<img src={item.logo} alt="company logo" className="w-14 mt-2 mx-auto opacity-80" />
 			</div>
 
 		</div>
