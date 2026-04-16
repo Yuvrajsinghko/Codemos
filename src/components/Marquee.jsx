@@ -30,7 +30,7 @@ const Marquee = () => {
                   className="object-contain h-10 invert brightness-0"
                   key={idx}
                   src={logo}
-                  alt="Company Logo"
+                  alt=""
                 />
               );
             })
