@@ -17,12 +17,12 @@ const Placements = () => {
 		{
             name: "Anil Gehlot", 
             img: "/images/students/anil.png", 
-            logo: "/logos/enqurious-logo.png" 
+            logo: "/logos/enqurious-logo.svg" 
         },
         {
             name: "Paritosh Verma", 
             img: "/images/students/paritosh.png", 
-            logo: "/logos/fico-logo.png" 
+            logo: "/logos/fico-logo.svg" 
         },
         {
             name: "Palak Rathi", 
@@ -32,12 +32,12 @@ const Placements = () => {
         {
             name: "Nadeem Khan", 
             img: "/images/students/nadeem.png", 
-            logo: "/logos/valueLab-logo.svg" 
+            logo: "/logos/valuelabs-logo.svg" 
         },
         {
             name: "Shubham Raikwar", 
             img: "/images/students/shubham.png", 
-            logo: "/logos/aumiqx-logo.png" 
+            logo: "/logos/aumiqx-logo.svg" 
         },
         {
             name: "Shashank Sharma", 
@@ -47,32 +47,32 @@ const Placements = () => {
         {
             name: "Gurpreet Kaur", 
             img: "/images/students/gurpreet.png", 
-            logo: "/logos/gamaEdge-logo.png" 
+            logo: "/logos/gamma-edge-logo.svg" 
         },
         {
             name: "Kapil Malviya", 
             img: "/images/students/kapil.png", 
-            logo: "/logos/infinix-1.svg" 
+            logo: "/logos/infinix-logo.svg" 
         },
         {
             name: "Ashish Parmar", 
             img: "/images/students/ashish.png", 
-            logo: "/logos/calsoft-logo.png" 
+            logo: "/logos/calsoft-logo.svg" 
         },
         {
             name: "Samarth Sharma", 
             img: "/images/students/samarth.png", 
-            logo: "/logos/data-genie-logo.png" 
+            logo: "/logos/data-genie-logo.svg" 
         },
         {
             name: "Vinayak Singoriya", 
             img: "/images/students/vinayak.png", 
-            logo: "/logos/cognam-logo.png" 
+            logo: "/logos/cognam-logo.svg" 
         },
         {
             name: "Lokesh Dangi", 
             img: "/images/students/lokesh.png", 
-            logo: "" 
+            logo: "/logos/appointy-logo.svg" 
         },
 		
 	];
@@ -132,10 +132,10 @@ const Placements = () => {
 	const Card = ({ item }) => (
 		<div className="min-w-[250px] bg-white/5 border border-white/80 rounded-2xl p-6 flex flex-col items-center text-center transition duration-300 hover:shadow-[0_10px_25px_rgba(251,191,36,0.25)] hover:border-amber-500 shadow-amber-300/40">
 
-            <div className="flex items-center gap-2 mb-4">
-                <p className="text-md text-white/60">Placed at</p>
+            <div className="flex items-center gap-4 mb-4">
+                <p className="text-md text-white/60 hover:text-amber-300">Placed at</p>
                 <img
-                    className="w-10 h-10 object-contain"
+                    className="w-20 h-10 p-1 object-cover invert brightness-0 "
                     src={item.logo}
                     alt="company logo"
                     
