@@ -132,10 +132,10 @@ const Placements = () => {
 	const Card = ({ item }) => (
 		<div className="min-w-[250px] bg-white/5 border border-white/80 rounded-2xl p-6 flex flex-col items-center text-center transition duration-300 hover:shadow-[0_10px_25px_rgba(251,191,36,0.25)] hover:border-amber-500 shadow-amber-300/40">
 
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center gap-4 mb-4">
                 <p className="text-md text-white/60">Placed at</p>
                 <img
-                    className="w-10 h-10 object-contain"
+                    className="w-20 h-20 object-contain"
                     src={item.logo}
                     alt="company logo"
                     
