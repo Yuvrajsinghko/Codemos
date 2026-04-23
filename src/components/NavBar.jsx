@@ -1,34 +1,23 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
 	return (
-		<nav className="w-screen flex justify-between items-center px-8 py-8">
-			
-			<h1 className="text-3xl font-bold font-[NeueMachina]">
-			CODEMOS
-			</h1>
+		<nav className="text-white w-screen flex justify-between items-center px-8 py-8">
+			<Link to="/" className="text-3xl font-bold font-[NeueMachina]">CODEMOS</Link>
 
 			<div className="hidden md:flex gap-8 text-lg">
-			<span className="cursor-pointer hover:text-amber-500">Home</span>
+				<Link to="/" className="cursor-pointer hover:text-amber-500">Home</Link>
 
-			<span 
-				className="cursor-pointer hover:text-amber-500"
-				onClick={() => {
-					const section = document.getElementById("courses");
-					section.scrollIntoView({ behavior: "smooth" });
-				}}
-			>
-				Courses
-			</span>
+				<Link to="/courses" className="cursor-pointer hover:text-amber-500">Courses</Link>
 
-			<span className="cursor-pointer hover:text-amber-500">Placements</span>
+				<Link to="/placements" className="cursor-pointer hover:text-amber-500">Placements</Link>
 
-			<span className="cursor-pointer hover:text-amber-500">About Us</span>
-
+				<Link to="/about" className="cursor-pointer hover:text-amber-500">About Us</Link>
 			</div>
 
 			<button className="bg-amber-500 text-lg font-bold font-[NeueMachina] rounded-xl px-4 py-2">
-			Request Callback
+				Request Callback
 			</button>
-
 		</nav>
 	);
 };

@@ -1,7 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
-import Navbar from "../components/NavBar";
 
 const HeroSection = () => {
 	const container = useRef();
@@ -41,7 +40,6 @@ const HeroSection = () => {
 			ref={container}
 			className="h-screen w-full text-white flex flex-col"
 		>
-            <Navbar />
 			<div className="flex-1 flex flex-col justify-center items-center text-center text-white">
 				<h1 className="hero-heading text-4xl md:text-7xl font-[NeueMachina] tracking-wider">
 					We Don’t Teach Courses.
