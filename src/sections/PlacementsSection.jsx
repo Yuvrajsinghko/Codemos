@@ -130,7 +130,7 @@ const Placements = () => {
 
 	// single card component
 	const Card = ({ item }) => (
-		<div className="min-w-[250px] bg-white/5 border border-white/80 rounded-2xl p-6 flex flex-col items-center text-center transition duration-300 hover:shadow-[0_10px_25px_rgba(251,191,36,0.25)] hover:border-amber-500 shadow-amber-300/40">
+		<div className="min-w-[250px] bg-white/5 border border-white/80 rounded-2xl p-6 flex flex-col items-center text-center transition duration-300 hover:shadow-[10px_10px_25px_rgba(251,191,36,0.25)] hover:border-amber-500  ">
 
             <div className="flex items-center gap-4 mb-4">
                 <p className="text-md text-white/60 hover:text-amber-300">Placed at</p>
@@ -166,7 +166,7 @@ const Placements = () => {
 			</div>
 
 			<div
-				className="overflow-hidden mb-10"
+				className=" mb-10"
 				onMouseEnter={handleRow1MouseEnter}
 				onMouseLeave={handleRow1MouseLeave}
 			>
@@ -178,7 +178,7 @@ const Placements = () => {
 			</div>
 
 			<div
-				className="overflow-hidden"
+				className=""
 				onMouseEnter={handleRow2MouseEnter}
 				onMouseLeave={handleRow2MouseLeave}
 			>
