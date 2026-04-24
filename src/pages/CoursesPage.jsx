@@ -83,19 +83,19 @@ const CoursesPage = () => {
 
 	// 🔥 Reusable Card (same for ALL)
 	const CourseCard = ({ course }) => (
-		<div className="w-full bg-white/5 border border-white/40 rounded-2xl px-5 py-6
-			backdrop-blur-lg transition duration-300 hover:shadow-[0_10px_30px_rgba(251,191,36,0.25)] 
-			hover:border-amber-400">
+		<div className="group w-full bg-white/5 border-2 border-white/80 rounded-2xl px-5 py-6
+			backdrop-blur-lg transition duration-300 hover:shadow-[10px_10px_30px_rgba(251,191,36,0.25)] 
+			hover:border-amber-500 hover:bg-white/5 ">
 			
-			<div className="h-22 flex items-center justify-center text-center mb-10 border-b border-white/30">
-				<h3 className="text-2xl md:text-3xl font-semibold mb-3 w-full font-[NewMachina]">
+			<div className="h-18 flex items-center justify-center text-center mb-6 border-b border-white/40">
+				<h3 className="text-2xl md:text-3xl font-semibold mb-3 w-full font-[NeueMachina] duration-300 group-hover:text-amber-500">
 					{course.title}
 				</h3>
 			</div>
 
 			{/* Content */}
-			<div className="flex flex-col md:flex-row gap-10 items-stretch">
-				<div className="w-full md:w-1/2">
+			<div className="flex flex-col md:flex-row gap-10 justify-center px-1">
+				<div className="w-full md:w-1/2 border border-white/80 rounded-xl">
 					<img
 						src={course.img}
 						alt={course.title}
@@ -106,11 +106,11 @@ const CoursesPage = () => {
 				<div className="w-full md:w-1/2 flex flex-col justify-evenly">
 					<ul className="text-white/70 text-sm md:text-base mb- space-y-2 leading-relaxed ">
 						{course.points.map((point, i) => (
-							<li key={i}>• {point}</li>
+							<li key={i}>•{point}</li>
 						))}
 					</ul>
 
-					<button className="mt-6 w-fit px-7 py-3 text-lg bg-amber-500 text-black rounded-lg font-semibold hover:bg-amber-400 transition">
+					<button className="mt-6 w-fit px-7 py-3 text-lg bg-amber-500 text-black rounded-lg font-semibold hover:bg-amber-400 transition duration-300 group-hover:-translate-y-1">
 						Know More
 					</button>				
 				</div>
@@ -134,7 +134,7 @@ const CoursesPage = () => {
 			</div>
 
 			{/* 🔥 Grid Layout (2 per row) */}
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-7xl mx-auto">
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-15 max-w-7xl mx-auto">
 				{courses.map((course, index) => (
 					<CourseCard key={index} course={course} />
 				))}
