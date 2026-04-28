@@ -32,7 +32,7 @@ const PlacementPage = () => {
 							bg-white/5 backdrop-blur-lg
 							px-6 py-8 text-center
 							flex flex-col justify-center items-center
-							transition duration-300
+							transition duration-300 my-22
 							hover:-translate-y-2
 							hover:border-amber-500
 							hover:shadow-[5px_5px_25px_rgba(251,191,36,0.2)] shadow-amber-500"
