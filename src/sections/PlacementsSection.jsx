@@ -130,7 +130,7 @@ const Placements = () => {
 
 	// single card component
 	const Card = ({ item }) => (
-		<div className="min-w-[250px] bg-white/5 border border-white/80 rounded-2xl p-6 flex flex-col items-center text-center transition duration-300 hover:shadow-[10px_10px_25px_rgba(251,191,36,0.25)] hover:border-amber-500  ">
+		<div className="min-w-[250px] bg-white/5 border border-white/80 rounded-2xl p-6 flex flex-col items-center text-center transition duration-300 hover:-translate-y-2 hover:shadow-[5px_5px_25px_rgba(251,191,36,0.25)] shadow-amber-500 hover:border-amber-500  ">
 
             <div className="flex items-center gap-4 mb-4">
                 <p className="text-md text-white/60 hover:text-amber-300">Placed at</p>
