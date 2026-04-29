@@ -1,15 +1,15 @@
 const logos = [
   "/logos/appointy-Logo.svg",
-  "/logos/calsoft-logo.png",
-  "/logos/cognam-logo.png",
-  "/logos/data-genie-logo.png",
-  "/logos/enqurious-logo.png",
-  "/logos/fico-logo.png",
-  "/logos/gamaEdge-logo.png",
-  "/logos/infinix-1.svg",
+  "/logos/calsoft-logo.svg",
+  "/logos/cognam-logo.svg",
+  "/logos/data-genie-logo.svg",
+  "/logos/enqurious-logo.svg",
+  "/logos/fico-logo.svg",
+  "/logos/gamma-edge-logo.svg",
+  "/logos/infinix-logo.svg",
   "/logos/moengage-logo.svg",
   "/logos/tech-mahindra-logo.svg",
-  "/logos/valueLab-logo.svg",
+  "/logos/valuelabs-logo.svg",
 ];
 
 const features = [

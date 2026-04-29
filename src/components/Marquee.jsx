@@ -6,6 +6,8 @@ import data from "../constants";
 const Marquee = () => {
   const trackRef = useRef();
   const { logos } = data;
+  console.log(logos);
+  
   useGSAP(
     () => {
       gsap.to(trackRef.current, {
@@ -18,7 +20,7 @@ const Marquee = () => {
     { scope: trackRef },
   );
   return (
-    <div className="overflow-hidden border-t-[0.1vh] border-b-[0.1vh] w-full py-10 ">
+    <div className="overflow-hidden  w-full py-10 ">
       <div
         ref={trackRef}
         className="flex gap-25  items-center h-20 w-max opacity-55 "
@@ -27,10 +29,10 @@ const Marquee = () => {
           ? [...logos, ...logos].map((logo, idx) => {
               return (
                 <img
-                  className="object-contain h-10 invert brightness-0"
+                  className="object-contain h-28 invert brightness-0"
                   key={idx}
                   src={logo}
-                  alt="Company"
+                  alt="Company logo"
                 />
               );
             })
