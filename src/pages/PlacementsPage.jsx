@@ -28,11 +28,11 @@ const PlacementPage = () => {
 						<div key={index} className={`${item.top ? "md:-translate-y-12" : ""}`}>
 						<div className="
 							w-[200px] h-[190px] md:w-[200px] md:h-[180px]
-							rounded-xl border-2 border-white/20
+							rounded-xl border border-white/80
 							bg-white/5 backdrop-blur-lg
 							px-6 py-8 text-center
 							flex flex-col justify-center items-center
-							transition duration-300 my-22
+							transition duration-300 my-30
 							hover:-translate-y-2
 							hover:border-amber-500
 							hover:shadow-[5px_5px_25px_rgba(251,191,36,0.2)] shadow-amber-500"
