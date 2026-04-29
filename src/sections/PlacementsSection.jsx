@@ -72,7 +72,7 @@ const Placements = () => {
         {
             name: "Lokesh Dangi", 
             img: "/images/students/lokesh.png", 
-            logo: "/logos/appointy-logo.svg" 
+            logo: "/logos/appointy-Logo.svg" 
         },
 		
 	];
