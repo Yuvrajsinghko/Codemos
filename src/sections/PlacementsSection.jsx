@@ -130,12 +130,12 @@ const Placements = () => {
 
 	// single card component
 	const Card = ({ item }) => (
-		<div className="min-w-[250px] bg-white/5 border border-white/80 rounded-2xl p-6 flex flex-col items-center text-center transition duration-300 hover:-translate-y-2 hover:shadow-[5px_5px_25px_rgba(251,191,36,0.25)] shadow-amber-500 hover:border-amber-500  ">
+		<div className="group min-w-[250px] bg-white/5 border border-white/80 rounded-2xl p-6 flex flex-col items-center text-center transition duration-300 hover:-translate-y-2 hover:shadow-[5px_5px_25px_rgba(251,191,36,0.25)] shadow-amber-500 hover:border-amber-500 ">
 
-            <div className="flex items-center gap-4 mb-4">
-                <p className="text-md text-white/60 hover:text-amber-300">Placed at</p>
+            <div className="flex items-center gap-4 mb-6 border-b border-white/60">
+                <p className="text-md text-white/60 transition duration-300 group-hover:scale-110 group-hover:text-amber-500">Placed at</p>
                 <img
-                    className="w-20 h-10 p-1 object-cover invert brightness-0 "
+                    className="w-24 h-11 p-2 object-cover invert brightness-0"
                     src={item.logo}
                     alt="company logo"
                     
@@ -145,10 +145,10 @@ const Placements = () => {
 			<img
                 src={item.img}
                 alt={item.name}
-                className="w-35 h-35 rounded-full object-cover mb-4  border-none"
+                className="w-35 h-35 rounded-full object-cover  border-none"
             />
 
-			<div className="mt-4 text-center">
+			<div className="mt-6 text-center">
 				<p className="text-lg font-semibold">{item.name}</p>
 			</div>
 

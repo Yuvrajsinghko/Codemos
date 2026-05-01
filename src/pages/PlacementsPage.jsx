@@ -1,3 +1,6 @@
+import PlacementSlider from "../components/PlacementSlider";
+import PlacementCard from "../components/PlacementCard";
+
 const stats = [
 	{ value: "5 LPA", label: "Average Package", top: false },
 	{ value: "200+", label: "Students Trained & Placed", top: true },
@@ -7,6 +10,14 @@ const stats = [
 ];
 
 const PlacementPage = () => {
+	const nextStudent = {
+		name: "YOU ARE NEXT",
+		img: "/images/students/your-next.jpg",
+		logo: "/logos/target-logo.svg",
+		role: "Start Your Dream Career",
+		package: "As Per Your Potential",
+	};
+	
 	return (
 		<section className="w-full bg-black text-white py-24 px-6">
 
@@ -48,6 +59,12 @@ const PlacementPage = () => {
 					</div>
 				))}
 
+			</div>
+			
+			<PlacementSlider />
+
+			<div className="mt-28 flex justify-center">
+				<PlacementCard student={nextStudent} />
 			</div>
 
 		</section>
