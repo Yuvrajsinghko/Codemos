@@ -117,48 +117,50 @@ const PlacementSlider = () => {
 				Our <span className="text-amber-500">Success Stories</span>
 			</h2>
 
-			<div className="flex items-center gap-6">
-				{/* left arrow */}
-				<button
-					onClick={prevSlide}
-					className="
-						w-14 h-14 rounded-full
-						bg-white/10 backdrop-blur-lg
-						border border-white/20
-						flex items-center justify-center
-						transition duration-300
-						hover:border-amber-500
-						hover:text-amber-500
-						hover:scale-110
-					"
-				>
-					<ChevronLeft size={26} />
-				</button>
+            <div className="max-w-7xl mx-auto grid grid-cols-[80px_1fr_80px] items-center gap-6">
+                
+                    {/* left arrow */}
+                    <button
+                        onClick={prevSlide}
+                        className="
+                            w-14 h-14 rounded-full
+                            bg-white/10 backdrop-blur-lg
+                            border border-white/20
+                            flex items-center justify-center justify-self-center
+                            transition duration-300
+                            hover:border-amber-500
+                            hover:text-amber-500
+                            hover:scale-110
+                        "
+                    >
+                        <ChevronLeft size={26} />
+                    </button>
 
-				{/* cards */}
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-8 flex-1">
-					{visibleStudents.map((student, index) => (
-						<PlacementCard key={index} student={student} />
-					))}
-				</div>
+                    {/* cards */}
+                    <div className=" flex gap-12 justify-center">
+                        {visibleStudents.map((student, index) => (
+                            <PlacementCard key={index} student={student} />
+                        ))}
+                    </div>
 
-				{/* right arrow */}
-				<button
-					onClick={nextSlide}
-					className="
-						w-14 h-14 rounded-full
-						bg-white/10 backdrop-blur-lg
-						border border-white/20
-						flex items-center justify-center
-						transition duration-300
-						hover:border-amber-500
-						hover:text-amber-500
-						hover:scale-110
-					"
-				>
-					<ChevronRight size={26} />
-				</button>
-			</div>
+                    {/* right arrow */}
+                    <button
+                        onClick={nextSlide}
+                        className="
+                            w-14 h-14 rounded-full
+                            bg-white/10 backdrop-blur-lg
+                            border border-white/20
+                            flex items-center justify-center justify-self-center
+                            transition duration-300
+                            hover:border-amber-500
+                            hover:text-amber-500
+                            hover:scale-110
+                        "
+                    >
+                        <ChevronRight size={26} />
+                    </button>
+                
+            </div>
 		</section>
 	);
 };
