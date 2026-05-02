@@ -11,7 +11,7 @@ const stats = [
 
 const PlacementPage = () => {
 	const nextStudent = {
-		name: "YOU ARE NEXT",
+		name: "YOU CAN BE NEXT",
 		img: "/images/students/your-next.jpg",
 		logo: "/logos/target-logo.svg",
 		role: "Start Your Dream Career",
@@ -43,7 +43,7 @@ const PlacementPage = () => {
 							bg-white/5 backdrop-blur-lg
 							px-6 py-8 text-center
 							flex flex-col justify-center items-center
-							transition duration-300 my-30
+							transition duration-300 my-20
 							hover:-translate-y-2
 							hover:border-amber-500
 							hover:shadow-[5px_5px_25px_rgba(251,191,36,0.2)] shadow-amber-500"
