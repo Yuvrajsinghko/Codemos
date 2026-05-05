@@ -57,7 +57,7 @@ const HeroSection = () => {
 				<div className="flex mt-10">
 					<button
 						ref={btnRef}
-						className="bg-amber-500 text-xl text-black px-12 py-4 rounded-xl font-semibold hover:bg-amber-400 transition"
+						className="bg-amber-500 text-lg md:text-xl text-black px-8 py-3 rounded-lg font-[NeueMachina] font-semibold cursor-pointer transition-all duration-300 hover:scale-105"
 					>
 						Start Now
 					</button>

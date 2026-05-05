@@ -112,18 +112,18 @@ const PlacementSlider = () => {
 	];
 
 	return (
-		<section className="mt-32">
-			<h2 className="text-center text-4xl md:text-5xl font-[NeueMachina] mb-16">
+		<section className="mt-24 h-[80vh] flex flex-col justify-center items-center">
+			<h2 className=" shrink-0 text-center text-4xl md:text-5xl font-[NeueMachina] mb-16">
 				Our <span className="text-amber-500">Success Stories</span>
 			</h2>
 
-            <div className="max-w-7xl mx-auto grid grid-cols-[80px_1fr_80px] items-center gap-6">
+            <div className=" w-full shrink-0 max-w-7xl mx-auto grid grid-cols-[80px_1fr_80px] items-center gap-6">
                 
                     {/* left arrow */}
                     <button
                         onClick={prevSlide}
                         className="
-                            w-14 h-14 rounded-full
+                            w-14 h-14 rounded-xl
                             bg-white/10 backdrop-blur-lg
                             border border-white/20
                             flex items-center justify-center justify-self-center
@@ -147,7 +147,7 @@ const PlacementSlider = () => {
                     <button
                         onClick={nextSlide}
                         className="
-                            w-14 h-14 rounded-full
+                            w-14 h-14 rounded-xl
                             bg-white/10 backdrop-blur-lg
                             border border-white/20
                             flex items-center justify-center justify-self-center
@@ -159,7 +159,6 @@ const PlacementSlider = () => {
                     >
                         <ChevronRight size={26} />
                     </button>
-                
             </div>
 		</section>
 	);
