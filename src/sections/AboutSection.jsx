@@ -19,7 +19,6 @@ const AboutSection = () => {
         ease: "power2.out",
         scrollTrigger: {
           trigger: ".stats",
-          markers: true,
           start: "top 80%",
           end: "top 20%",
           scrub: 3,
@@ -56,7 +55,7 @@ const AboutSection = () => {
         ease: "power2.out",
         scrollTrigger: {
           trigger: ".head-left",
-          markers: true,
+
           start: "top 80%",
           end: "top 20%",
           scrub: 3,
@@ -68,7 +67,6 @@ const AboutSection = () => {
         ease: "power2.out",
         scrollTrigger: {
           trigger: ".head-right",
-          markers: true,
           start: "top 80%",
           end: "top 20%",
           scrub: 3,
@@ -89,7 +87,6 @@ const AboutSection = () => {
         ease: "power2.out",
         scrollTrigger: {
           trigger: ".title1",
-          markers: true,
           start: "top 80%",
           end: "top 20%",
           scrub: 3,
@@ -102,7 +99,6 @@ const AboutSection = () => {
         ease: "power2.out",
         scrollTrigger: {
           trigger: ".title2",
-          markers: true,
           start: "top 80%",
           end: "top 20%",
           scrub: 3,
@@ -116,7 +112,6 @@ const AboutSection = () => {
         ease: "power2.out",
         scrollTrigger: {
           trigger: card,
-          markers: true,
           start: "top 90%",
           end: "top -10%",
         },
