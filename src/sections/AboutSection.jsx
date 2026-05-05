@@ -3,6 +3,9 @@ import gsap from "gsap";
 import Marquee from "../components/Marquee";
 import { useRef } from "react";
 import data from "../constants";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 const AboutSection = () => {
   const { features } = data;
   const container1 = useRef();
@@ -13,35 +16,63 @@ const AboutSection = () => {
       gsap.from(".stats", {
         y: 80,
         opacity: 0,
-        duration: 1,
         ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".stats",
+          markers: true,
+          start: "top 80%",
+          end: "top 20%",
+          scrub: 3,
+        },
       });
 
       gsap.from(".percent", {
         innerText: 0 + "%",
-        duration: 1,
+        duration: 3,
         snap: {
-          innerText: 10,
+          innerText: 2,
+        },
+        scrollTrigger: {
+          trigger: ".percent",
+          start: "top 80%",
+          toggleActions: "play none none none",
         },
       });
       gsap.from(".count", {
         innerText: 0,
-        duration: 1,
+        duration: 3,
         snap: {
           innerText: 5,
         },
+        scrollTrigger: {
+          trigger: ".count",
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
       });
       gsap.from(".head-left", {
-        x:-100,
+        x: -100,
         opacity: 0,
-        duration: 2,
         ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".head-left",
+          markers: true,
+          start: "top 80%",
+          end: "top 20%",
+          scrub: 3,
+        },
       });
       gsap.from(".head-right", {
-        x:100,
+        x: 100,
         opacity: 0,
-        duration: 2,
         ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".head-right",
+          markers: true,
+          start: "top 80%",
+          end: "top 20%",
+          scrub: 3,
+        },
       });
     },
     { scope: container1 },
@@ -53,24 +84,42 @@ const AboutSection = () => {
       gsap.from(".title1", {
         x: -80,
         opacity: 0,
-        duration: 2,
+
         stagger: 0.2,
         ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".title1",
+          markers: true,
+          start: "top 80%",
+          end: "top 20%",
+          scrub: 3,
+        },
       });
       gsap.from(".title2", {
         x: 80,
         opacity: 0,
-        duration: 2,
         stagger: 0.2,
         ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".title2",
+          markers: true,
+          start: "top 80%",
+          end: "top 20%",
+          scrub: 3,
+        },
       });
 
       gsap.from(card, {
         y: 100,
         opacity: 0,
-        duration: 1,
         stagger: 0.2,
         ease: "power2.out",
+        scrollTrigger: {
+          trigger: card,
+          markers: true,
+          start: "top 90%",
+          end: "top -10%",
+        },
       });
     },
     { scope: container2 },
@@ -79,10 +128,7 @@ const AboutSection = () => {
   return (
     <section className="min-h-screen w-full  text-[#ffffff] mt-10">
       <Marquee />
-      <div
-        ref={container1}
-        className="font-[NeueMachina] mt-44"
-      >
+      <div ref={container1} className="font-[NeueMachina] mt-44">
         <h2 className="head-left text-7xl uppercase text-center tracking-wider">
           A <span className="text-amber-500">skill</span> oriented training
           &{" "}
@@ -93,14 +139,14 @@ const AboutSection = () => {
 
         <div className="stats flex justify-around px-10 mt-52">
           <div
-            className="bg-white/5 border-white/10  backdrop-blur-lg border p-6 border-white/10 rounded-2xl text-white
+            className="bg-white/5   backdrop-blur-lg border p-6 border-white/10 rounded-2xl text-white
         transition-colors duration-300
         hover:bg-white/10
         hover:border-white/20
         flex flex-col items-center gap-4"
           >
             <h3 className="percent text-white/80 text-7xl ">
-              <span className="percent">100</span>%
+              <span>100</span>%
             </h3>
             <p className="text-white/80 text-3xl uppercase font-bold tracking-wider">
               Placements
