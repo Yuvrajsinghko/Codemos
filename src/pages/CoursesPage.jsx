@@ -127,7 +127,7 @@ const CoursesPage = () => {
 					Level Up Your <span className="text-amber-500">Coding Skills</span>
 				</h1>
 
-				<p className="mt-2 text-lg md:text-2xl text-white/70 font-[Manrope]">
+				<p className="mt-2 mb-24 text-lg md:text-2xl text-white/70 font-[Manrope]">
 					"Expert-led programs designed to make you industry-ready from day one."
 				</p>
 			</div>
