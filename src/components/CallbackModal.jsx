@@ -6,7 +6,7 @@ const CallbackModal = ({onClose}) => {
       <div className="content relative flex flex-col gap-10 rounded-3xl bg-white/10 px-7 py-4 ">
         <div className="flex justify-between items-center">
           <h2 className="text-4xl capitalize">Request a  <span className="text-[#FE9A00]">Call</span> Back</h2>
-          <RxCrossCircled onClick={onClose}  size={35} />
+          <RxCrossCircled onClick={onClose} className="hover:bg-red-500 rounded-full"  size={35} />
         </div>
         <form action="" method="POST" className="flex flex-col items-center gap-6">
           <div className="username flex flex-col gap-6">
