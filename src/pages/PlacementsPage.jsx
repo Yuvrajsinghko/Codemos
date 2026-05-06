@@ -16,7 +16,7 @@ const PlacementPage = () => {
 
 			{/* Heading */}
 			<div className="text-center mb-24 max-w-5xl mx-auto">
-				<h1 className="text-4xl md:text-5xl font-[NeueMachina] leading-tight">
+				<h1 className="text-4xl md:text-5xl font-[NeueMachina] leading-tight mt-24">
 					Your Next Big <span className="text-amber-500">Opportunity</span> Starts Here.
 				</h1>
 

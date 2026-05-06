@@ -38,14 +38,18 @@ const HeroSection = () => {
         
 		<section
 			ref={container}
-			className="h-screen w-full text-white flex flex-col"
+			className="min-h-fit w-full text-white flex flex-col items-center mt-32 pb-16"
 		>
-			<div className="flex-1 flex flex-col justify-center items-center text-center text-white">
-				<h1 className="hero-heading text-4xl md:text-7xl font-[NeueMachina] tracking-wider">
+			<div className="flex flex-col items-center text-center">
+				<h2 className="hero-heading mt-16 mb-12 text-sm md:text-xl xl:text-2xl uppercase text-amber-500">
+					Learn • Build • Get Hired
+				</h2>
+
+				<h1 className="hero-heading text-4xl md:text-7xl font-[NeueMachina] tracking-wider ">
 					We Don’t Teach Courses.
 				</h1>
 
-				<h1 className="hero-heading pb-6 text-4xl md:text-7xl font-[NeueMachina] tracking-wider mt-2">
+				<h1 className="hero-heading pb-6 text-4xl md:text-7xl font-[NeueMachina] tracking-wider mt-3">
 					We Create <span className="text-amber-500">Developers!</span>
 				</h1>
 
@@ -57,7 +61,7 @@ const HeroSection = () => {
 				<div className="flex mt-10">
 					<button
 						ref={btnRef}
-						className="bg-amber-500 text-lg md:text-xl text-black px-8 py-3 rounded-lg font-[NeueMachina] font-semibold cursor-pointer transition-all duration-300 hover:scale-105"
+						className="bg-amber-500 text-lg md:text-xl text-black px-8 py-3 rounded-lg font-[NeueMachina] font-bold cursor-pointer transition-all duration-300 hover:scale-105"
 					>
 						Start Now
 					</button>
