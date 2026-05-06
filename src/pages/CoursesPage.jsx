@@ -123,7 +123,7 @@ const CoursesPage = () => {
 
 			{/* 🔥 Heading */}
 			<div className="text-center mb-20 max-w-5xl mx-auto">
-				<h1 className="text-4xl md:text-5xl font-[NeueMachina] leading-tight">
+				<h1 className="mt-24 text-4xl md:text-5xl font-[NeueMachina] leading-tight">
 					Level Up Your <span className="text-amber-500">Coding Skills</span>
 				</h1>
 
