@@ -38,10 +38,10 @@ const HeroSection = () => {
         
 		<section
 			ref={container}
-			className="min-h-fit w-full text-white flex flex-col items-center mt-32 pb-16"
+			className="min-h-screen w-full text-white flex flex-col justify-around items-center mt-12"
 		>
 			<div className="flex flex-col items-center text-center">
-				<h2 className="hero-heading mt-16 mb-12 text-sm md:text-xl xl:text-2xl uppercase text-amber-500">
+				<h2 className="hero-heading mb-14 text-sm md:text-xl xl:text-2xl uppercase text-amber-500">
 					Learn • Build • Get Hired
 				</h2>
 
@@ -53,7 +53,7 @@ const HeroSection = () => {
 					We Create <span className="text-amber-500">Developers!</span>
 				</h1>
 
-				<p className="hero-sub pb-12 text-lg md:text-xl xl:text-2xl text-white/70 max-w-4xl">
+				<p className="hero-sub pb-14 text-lg md:text-xl xl:text-2xl text-white/70 max-w-4xl">
 					Learn Python Oriented Web Development through Real-World Projects,
 					Internships and Mock Interviews. Become Industry ready from day one.
 				</p>
