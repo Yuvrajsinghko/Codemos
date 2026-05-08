@@ -121,7 +121,6 @@ const CoursesPage = () => {
 	return (
 		<section className="w-full bg-black text-white py-24 px-6">
 
-			{/* 🔥 Heading */}
 			<div className="text-center mb-20 max-w-5xl mx-auto">
 				<h1 className="mt-24 text-4xl md:text-5xl font-[NeueMachina] leading-tight">
 					Level Up Your <span className="text-amber-500">Coding Skills</span>
@@ -132,7 +131,7 @@ const CoursesPage = () => {
 				</p>
 			</div>
 
-			{/* 🔥 Grid Layout (2 per row) */}
+
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-15 max-w-7xl mx-auto">
 				{courses.map((course, index) => (
 					<CourseCard key={index} course={course} />

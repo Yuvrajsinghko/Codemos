@@ -11,13 +11,13 @@ import { NavLink } from "react-router-dom";
 
 const Footer = () => {
 	return (
-		<footer className="w-full bg-black text-white border-t border-white/10 mt-28">
-			<div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+		<footer className="w-full bg-black text-white border-y border-white/30 mt-28">
+			<div className="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-2 lg:grid-cols-4 gap-14">
 
 				{/* Brand */}
 				<div>
-					<h2 className="text-3xl font-[NeueMachina] font-bold">
-						CODE<span className="text-amber-500">MOS</span>
+					<h2 className="text-3xl font-[NeueMachina] font-bold text-amber-500">
+						CODEMOS
 					</h2>
 
 					<p className="mt-5 text-white/60 leading-relaxed">
@@ -57,20 +57,22 @@ const Footer = () => {
 					<div className="space-y-5 text-white/70">
 						<div className="flex gap-3 items-start">
 							<FaEnvelope className="text-amber-500 mt-1" />
-							<p>hello@codemos.in</p>
+							<p>contact.codemos@gmail.com</p>
 						</div>
 
 						<div className="flex gap-3 items-start">
 							<FaPhoneAlt className="text-amber-500 mt-1" />
-							<p>+91 98765 43210</p>
+							<p>+91 91791-70845</p>
 						</div>
 
 						<div className="flex gap-3 items-start">
 							<FaMapMarkerAlt className="text-amber-500 mt-1" />
 							<p>
-								Indore, Madhya Pradesh
+								2nd Floor, 45-Patel Nagar, 
+                <br />
+                Sapna Sangeeta Road
 								<br />
-								India
+								Indore, Madhya Pradesh.
 							</p>
 						</div>
 					</div>
@@ -82,10 +84,10 @@ const Footer = () => {
 						Find Us
 					</h3>
 
-					<div className="rounded-2xl overflow-hidden border border-white/10 h-[220px]">
+					<div className="rounded-xl overflow-hidden border-2 border-white/10 h-[220px] transition duration-300 hover:border-amber-500 hover:scale-102">
 						<iframe
 							title="location"
-							src="https://www.google.com/maps/embed?pb=!1m18..."
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d547.1497768702759!2d75.86648669397918!3d22.69958524926644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fce2968a4c07%3A0x5654fabe6ea39607!2s45%2C%20Sapna%20Sangeeta%20Rd%2C%20Patel%20Nagar%2C%20Indore%2C%20Madhya%20Pradesh%20452001!5e0!3m2!1sen!2sin!4v1778263569761!5m2!1sen!2sin"
 							className="w-full h-full"
 							loading="lazy"
 						/>
