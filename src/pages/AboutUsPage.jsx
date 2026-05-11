@@ -20,16 +20,16 @@ const AboutPage = () => {
 		<section className="w-full bg-black text-white px-6 py-24">
 
 			{/* Heading */}
-			<div className="max-w-6xl mx-auto text-center">
-				<h1 className="text-4xl md:text-6xl font-[NeueMachina] leading-tight">
+			<div className="max-w-6xl mx-auto text-center pt-24">
+				<h1 className="text-4xl md:text-5xl font-[NeueMachina] leading-tight">
 					About <span className="text-amber-500">CODEMOS</span>
 				</h1>
 
 				<p className="mt-8 text-lg md:text-2xl text-white/70 leading-relaxed font-[Manrope] max-w-5xl mx-auto">
 					CODEMOS is more than just a training institute — it is a launchpad for
-					future developers. We focus on practical learning, industry-relevant
-					skills, real-world projects, mock interviews, and placement-oriented
-					training that transforms beginners into confident professionals.
+					future developers. We focus on Practical Learning, Industry-relevant
+					Skills, Real-world Projects, Mock Interviews and Placement-oriented
+					Training that transforms beginners into confident professionals.
 					Whether you're from a technical background or starting fresh, CODEMOS
 					provides the right mentorship, roadmap, and environment to help you
 					build your career in tech.
@@ -127,28 +127,13 @@ const AboutPage = () => {
 					Your Journey Starts <span className="text-amber-500">Here</span>
 				</h2>
 
-				<p className="mt-5 text-white/70 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+				<p className="mt-5 text-white/70 text-lg md:text-xl max-w-5xl mx-auto leading-relaxed">
 					Join CODEMOS, learn modern technologies, build real projects,
 					and shape your future with confidence.
 				</p>
 
-				<button
-					className="
-						mt-10
-						px-10 py-4
-						bg-amber-500
-						text-black
-						font-bold
-						font-[NeueMachina]
-						text-lg
-						rounded-xl
-						transition duration-300
-						hover:scale-105
-						hover:bg-amber-400
-						hover:shadow-[0_0_25px_rgba(251,191,36,0.35)]
-					"
-				>
-					Start Your Journey
+				<button className="mt-20 px-8 py-3 rounded-lg bg-amber-500 text-black text-lg md:text-xl font-[NeueMachina] font-semibold cursor-pointer transition-all duration-300 hover:scale-105">
+					Start Now
 				</button>
 			</div>
 
