@@ -6,7 +6,7 @@ import data from "../constants";
 const Marquee = () => {
   const trackRef = useRef();
   const { logos } = data;
-  console.log(logos);
+
   
   useGSAP(
     () => {

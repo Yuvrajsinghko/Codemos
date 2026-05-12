@@ -14,13 +14,9 @@ const logos = [
 
 const features = [
   "personalized learning tracks",
-  "100% placement guarantee",
   "one to one mentorship",
   "skill based profile creation",
   "real life projects",
-  "paid internship",
-  "certification programme",
-  "corporate training",
   "skill oriented training",
 ];
 
