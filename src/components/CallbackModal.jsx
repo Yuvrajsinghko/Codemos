@@ -1,15 +1,29 @@
 import { RxCrossCircled } from "react-icons/rx";
-const CallbackModal = ({onClose}) => {
-  
-  return (
-    <div className="main-container fixed w-full h-full z-20 flex justify-center  items-center font-[NeueMachina]   bg-white/2 backdrop-blur-lg p-3">
-      <div className="content relative flex flex-col gap-10 rounded-3xl bg-white/10 px-7 py-4 ">
+import { createPortal } from "react-dom";
+import { BsSend } from "react-icons/bs";
+const CallbackModal = ({ onClose }) => {
+  return createPortal(
+    <div
+      className="main-container fixed inset-0 flex justify-center items-center font-[NeueMachina] bg-white/10 backdrop-blur-lg p-3"
+      style={{ zIndex: 99999 }}
+    >
+      <div className="content relative flex flex-col gap-10 rounded-3xl bg-black px-7 py-4 ">
         <div className="flex justify-between items-center">
-          <h2 className="text-4xl capitalize">Request a  <span className="text-[#FE9A00]">Call</span> Back</h2>
-          <RxCrossCircled onClick={onClose} className="hover:bg-red-500 rounded-full"  size={35} />
+          <h2 className="text-4xl capitalize text-gray-300">
+            Request a <span className="text-[#FE9A00]">Call</span> Back
+          </h2>
+          <RxCrossCircled
+            onClick={onClose}
+            className="text-red-300  rounded-full"
+            size={35}
+          />
         </div>
-        <form action="" method="POST" className="flex flex-col items-center gap-6">
-          <div className="username flex flex-col gap-6">
+        <form
+          action=""
+          method="POST"
+          className="flex flex-col items-center gap-6"
+        >
+          <div className="username flex flex-col gap-6 text-gray-300">
             <div>
               <label className="text-lg">Name*</label>
               <div className="flex justify-between gap-3">
@@ -51,10 +65,18 @@ const CallbackModal = ({onClose}) => {
               ></textarea>
             </div>
           </div>
-          <button onClick={onClose} className="px-3 hover:bg-white/40 text-[1.2vw] font-bold bg-[#FE9A00] rounded-lg py-2 border-2">Submit</button>
+
+          <button
+            onClick={onClose}
+            className="px-3 flex w-full font-[NeueMachina] justify-center items-center gap-2  text-gray-300 text-[1.2vw]  font-bold hover:bg-[#D55F2B]/70 bg-[#D55F2B] rounded-lg py-2 border-2"
+          >
+            <BsSend className="text-amber-600-" />
+            Book My CallBack
+          </button>
         </form>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 };
 

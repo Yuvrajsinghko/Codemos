@@ -56,7 +56,7 @@ const Navbar = () => {
 	},[])
 
 	return (
-		<nav ref={navRef} className="fixed top-0 left-0 z-50 text-white w-screen flex items-center justify-center px-10 py-10 bg-white/5 backdrop-blur-lg">
+		<nav ref={navRef} className="fixed top-0 left-0 z-40 text-white w-screen flex items-center justify-center px-10 py-10 bg-white/5 backdrop-blur-lg">
 			<div className="flex-1">
 				<NavLink to="/" className="text-2xl font-bold font-[NeueMachina]">
 					CODEMOS
