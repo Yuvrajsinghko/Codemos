@@ -6,9 +6,11 @@ import data from "../constants";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { CiCircleCheck } from "react-icons/ci";
 import { FiLayers } from "react-icons/fi";
+import { RxCrossCircled } from "react-icons/rx";
+
 gsap.registerPlugin(ScrollTrigger);
 const AboutSection = () => {
-  const { features } = data;
+  const { features, negativeFeatures } = data;
   const container1 = useRef();
   const container2 = useRef();
 
@@ -102,6 +104,20 @@ const AboutSection = () => {
           scrub: 3,
         },
       });
+      gsap.from(".Content-container",{
+        y:200,
+        opacity:0,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".title2",
+          start: "top 55%",
+          end: "top -35%",
+          markers:true,
+          scrub: 3,
+        },
+
+
+      })
     },
     { scope: container2 },
   );
@@ -174,21 +190,42 @@ const AboutSection = () => {
           </h3>
           <h3 className="title2">Than Others !</h3>
         </div>
-        <div className="features-content border flex p-4 border-amber-300/20 w-[65vw] h-[65vh] rounded-2xl">
-          <div className="flex flex-col gap-8 p-8 border border-green-500 w-1/2 rounded-2xl bg-black">
+        <div className="Content-container border flex p-4 border-amber-300/30 w-[80%] h-auto rounded-2xl">
+          <div className="left-content-container flex flex-col gap-8 p-8 border border-green-500/30   w-1/2 shadow-green-400 shadow-md rounded-2xl bg-black">
             <h2 className="text-3xl">Codemos</h2>
-            {features.length?
-            features.map((feat,idx)=>(
-              <p key={idx} className="flex items-center uppercase text-[2.8vh] font-[NeueMachina]  gap-3">
-
-                <CiCircleCheck size={25} className="text-green-600" />{feat}
-              </p>
-            ))
-            :"Data not found"}
-
+            {features.length
+              ? features.map((feat, idx) => (
+                  <p
+                    key={idx}
+                    className="flex items-center uppercase text-[2.8vh] font-[NeueMachina]  gap-3"
+                  >
+                    <CiCircleCheck size={25} className="text-green-600" />
+                    {feat}
+                  </p>
+                ))
+              : "Data not found"}
           </div>
-          <div className="border border-amber-300 rounded-2xl w-1/2">
-            <p> <FiLayers /> Others</p>
+          <div className="right-content-container p-8 flex flex-col h-auto gap-8 w-[55%]">
+            <div>
+              <p className="flex items-center gap-3">
+                {" "}
+                <FiLayers size={26} /> <span className="text-3xl">Others</span>
+              </p>
+            </div>
+            <div className="flex flex-col gap-8">
+              {negativeFeatures
+                ? negativeFeatures.map((feat, idx) => (
+                    <p
+                      className="flex items-center  text-[2.9vh] font-[NeueMachina] gap-3"
+                      key={idx}
+                    >
+                      {" "}
+                      <RxCrossCircled className="text-amber-600" size={25} />
+                      {feat}
+                    </p>
+                  ))
+                : "Data not found"}
+            </div>
           </div>
         </div>
       </div>

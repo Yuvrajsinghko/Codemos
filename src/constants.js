@@ -19,6 +19,13 @@ const features = [
   "real life projects",
   "skill oriented training",
 ];
+const negativeFeatures = [
+  "High Fees With Compromised Quality",
+  "Theory-Centric Learning",
+  "Outdated, Static Curriculum",
+  "No Competitive Learning Environment",
+  "Limited Practical Exposure"
+];
 
 const faqData = [
   {
@@ -53,4 +60,4 @@ const faqData = [
   },
 ];
 
-export  default { logos, features, faqData };
+export  default { logos, features, faqData,negativeFeatures };
