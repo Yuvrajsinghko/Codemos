@@ -108,12 +108,12 @@ const AboutSection = () => {
         y:200,
         opacity:0,
         ease: "power2.out",
+        duration:2,
         scrollTrigger: {
           trigger: ".title2",
           start: "top 55%",
           end: "top -35%",
-          markers:true,
-          scrub: 3,
+         
         },
 
 
