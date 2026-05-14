@@ -4,76 +4,81 @@ import { BsSend } from "react-icons/bs";
 const CallbackModal = ({ onClose }) => {
   return createPortal(
     <div
-      className="main-container fixed inset-0 flex justify-center items-center font-[NeueMachina] bg-white/10 backdrop-blur-lg p-3"
+      className="wrapper fixed inset-0 font-[Manrope] flex justify-center items-center text-gray-300  bg-white/10 backdrop-blur-lg"
       style={{ zIndex: 99999 }}
     >
-      <div className="content relative flex flex-col gap-10 rounded-3xl bg-black px-7 py-4 ">
-        <div className="flex justify-between items-center">
-          <h2 className="text-4xl capitalize text-gray-300">
-            Request a <span className="text-[#FE9A00]">Call</span> Back
-          </h2>
-          <RxCrossCircled
-            onClick={onClose}
-            className="text-red-300  rounded-full"
-            size={35}
-          />
+      <div className="main-container relative w-[90%] max-w-md h-[92%] p-6 rounded-2xl shadow-md border border-gray-200/10 shadow-amber-300  bg-black">
+        <RxCrossCircled
+          onClick={onClose}
+          size={25}
+          className="absolute right-4 top-4 cursor-pointer"
+        />
+        <div className="flex mt-3 flex-col justify-center items-center">
+          <h2 className="font-bold text-[2.3vw]">Request a Callback</h2>
+          <p className="text-center text-gray-300/60">
+            Fill the form below to request a callback <br /> from our team.
+          </p>
         </div>
-        <form
-          action=""
-          method="POST"
-          className="flex flex-col items-center gap-6"
-        >
-          <div className="username flex flex-col gap-6 text-gray-300">
-            <div>
-              <label className="text-lg">Name*</label>
-              <div className="flex justify-between gap-3">
-                <input
-                  className="px-2 rounded-lg py-1 border-2 outline-none"
-                  type="text"
-                  placeholder="First"
-                  name="fname"
-                />
-                <input
-                  className="px-2 rounded-lg py-1 border-2 outline-none"
-                  type="text"
-                  placeholder="Last"
-                  name="lname"
-                />
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <label className="text-lg">Email*</label>
-              <input
-                type="email"
-                className="px-2 rounded-lg py-1 border-2 outline-none"
-                name="email"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label className="text-lg">Phone No*</label>
-              <input
-                type="number"
-                className="px-2 rounded-lg py-1 border-2 outline-none"
-                name="phone"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label className="text-lg">Comment or Message</label>
-              <textarea
-                name="comments"
-                className="px-2 py-1 border-2 rounded-lg outline-none h-32"
-              ></textarea>
-            </div>
+        <form method="POST" className="flex flex-col gap-5">
+          <div className="flex flex-col gap-2">
+            <label for="name" className="text-[2.2vh] text-gray-300/60">
+              Name
+            </label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              className="px-3 py-2 border border-zinc-300/30 rounded-sm text-sm outline-none"
+            />
           </div>
-
-          <button
-            onClick={onClose}
-            className="px-3 flex w-full font-[NeueMachina] justify-center items-center gap-2  text-gray-300 text-[1.2vw]  font-bold hover:bg-[#D55F2B]/70 bg-[#D55F2B] rounded-lg py-2 border-2"
-          >
-            <BsSend className="text-amber-600-" />
-            Book My CallBack
+          <div className="flex flex-col gap-2">
+            <label for="phone" className="text-[2.2vh] text-gray-300/60">
+              Phone No.
+            </label>
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Enter you phone number"
+              className="px-3 py-2 border border-zinc-300/30 rounded-sm text-sm outline-none"
+            />
+          </div>
+          <div className="flex flex-col gap-2">
+            <label for="courses" className="text-[2.2vh] text-gray-300/60">
+              Enquiry For
+            </label>
+            <select
+              name="courses"
+              id="courses"
+              className="px-3 py-2 border border-zinc-300/30 rounded-sm bg-black text-sm outline-none"
+            >
+              <option value="CORPORATE COURSE">
+                CORPORATE COURSE (Full Stack)
+              </option>
+              <option value="DATA SCIENCE">DATA SCIENCE (ML + DL)</option>
+              <option value="CYBER SECURITY + DEVOPS">
+                CYBER SECURITY + DEVOPS
+              </option>
+              <option value="FRONTEND DEVELOPMENT">FRONTEND DEVELOPMENT</option>
+              <option value="BACKEND DEVELOPMENT">BACKEND DEVELOPMENT</option>
+              <option value="PYTHON + DSA">PYTHON + DSA</option>
+            </select>
+          </div>
+          <div className="flex flex-col gap-2">
+            <label for="enquiry" className="text-[2.2vh] text-gray-300/60">
+              How can we help you?
+            </label>
+            <textarea
+              className="px-3 h-[8vw] py-2 border border-zinc-300/30 rounded-sm text-sm outline-none"
+              name="enquiry"
+              placeholder="Eg. I want info about the courses.."
+            ></textarea>
+          </div>
+          <button onClick={onClose} className="bg-[#d6602c] hover:bg-[#d6602c]/90 flex items-center justify-center p-2 rounded-xl gap-2" type="submit" >
+           <BsSend  size={18}/> Book My Callback
           </button>
         </form>
+        
+  
       </div>
     </div>,
     document.body,
