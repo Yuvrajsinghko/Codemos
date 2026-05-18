@@ -56,7 +56,7 @@ const PlacementPage = () => {
 
 			<div className="max-w-5xl mx-auto text-center my-24">
 				<h1 className="text-amber-500 text-4xl md:text-5xl font-[NeueMachina] leading-tight">
-					Tech has no background requirement — only a learning mindset.
+					Tech has no background requirement — only a Learning Mindset.
 				</h1>
 
 				<p className="mt-6 text-lg md:text-2xl text-white/70 font-[Manrope] leading-relaxed">
