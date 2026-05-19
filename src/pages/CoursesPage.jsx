@@ -1,12 +1,13 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import CallbackModal from "../components/CallbackModal";
 
 gsap.registerPlugin(ScrollTrigger);
 
 //  Reusable Card (same for ALL)
-const CourseCard = ({ course }) => (
+const CourseCard = ({ course, openModal }) => (
 	<div className=" course-page-card group w-full bg-white/5 border border-white/80 rounded-2xl px-5 py-6
 		backdrop-blur-lg hover:shadow-[5px_5px_25px_rgba(251,191,36,0.25)] shadow-amber-500 hover:border-amber-500 hover:bg-white/5 ">
 		
@@ -33,7 +34,10 @@ const CourseCard = ({ course }) => (
 					))}
 				</ul>
 
-				<button className="mt-6 w-fit px-7 py-3 text-lg bg-amber-500 text-black rounded-lg font-semibold hover:bg-amber-400 transition duration-300 group-hover:-translate-y-1">
+				<button 
+					onClick={openModal}
+					className="mt-6 w-fit px-7 py-3 text-lg bg-amber-500 text-black rounded-lg font-semibold hover:bg-amber-400 transition duration-300 group-hover:-translate-y-1"
+				>
 					Know More
 				</button>				
 			</div>
@@ -44,6 +48,8 @@ const CourseCard = ({ course }) => (
 
 
 const CoursesPage = () => {
+
+	const [showModal, setShowModal] = useState(false);
 
 	const container = useRef();
 
@@ -178,9 +184,15 @@ const CoursesPage = () => {
 
 			<div className="courses-grid grid grid-cols-1 md:grid-cols-2 gap-15 max-w-7xl mx-auto">
 				{courses.map((course, index) => (
-					<CourseCard key={index} course={course} />
+					<CourseCard key={index} course={course} openModal={() => setShowModal(true)}/>
 				))}
 			</div>
+
+			{
+				showModal && (
+					<CallbackModal onClose={() => setShowModal(false)} />
+				)
+			}
 
 		</section>
 	);

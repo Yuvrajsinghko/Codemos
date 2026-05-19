@@ -1,8 +1,11 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import CallbackModal from "../components/CallbackModal";
 
 const HeroSection = () => {
+	const [showModal, setShowModal] = useState(false);
+
 	const container = useRef();
 	const btnRef = useRef();
 
@@ -61,11 +64,18 @@ const HeroSection = () => {
 				<div className="flex mt-10">
 					<button
 						ref={btnRef}
+						onClick={()=> setShowModal(true)}
 						className="bg-amber-500 text-lg md:text-xl text-black px-8 py-3 rounded-lg font-[NeueMachina] font-bold cursor-pointer transition-all duration-300 hover:scale-105"
 					>
 						Start Now
 					</button>
 				</div>
+				
+				{
+					showModal && (
+						<CallbackModal onClose={() => setShowModal(false)} />
+					)
+				}
 
 			</div>
 		</section>

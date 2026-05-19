@@ -1,4 +1,6 @@
 import { FaLinkedinIn, FaInstagram, FaYoutube } from "react-icons/fa";
+import { useState } from "react";
+import CallbackModal from "../components/CallbackModal";
 
 const mentors = [
 	{
@@ -16,6 +18,9 @@ const mentors = [
 ];
 
 const AboutPage = () => {
+
+    const [showModal, setShowModal] = useState(false);
+
 	return (
 		<section className="w-full bg-black text-white px-6 py-24">
 
@@ -132,10 +137,19 @@ const AboutPage = () => {
 					and shape your future with confidence.
 				</p>
 
-				<button className="mt-20 px-8 py-3 rounded-lg bg-amber-500 text-black text-lg md:text-xl font-[NeueMachina] font-semibold cursor-pointer transition-all duration-300 hover:scale-105">
+				<button
+                    onClick={() => setShowModal(true)}
+                    className="mt-20 px-8 py-3 rounded-lg bg-amber-500 text-black text-lg md:text-xl font-[NeueMachina] font-semibold cursor-pointer transition-all duration-300 hover:scale-105"
+                >
 					Start Now
 				</button>
 			</div>
+
+            {
+				showModal && (
+					<CallbackModal onClose={() => setShowModal(false)} />
+				)
+			}
 
 		</section>
 	);
