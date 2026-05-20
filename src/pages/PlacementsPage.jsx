@@ -1,7 +1,13 @@
 import PlacementSlider from "../components/PlacementSlider";
 import PlacementCard from "../components/PlacementCard";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import CallbackModal from "../components/CallbackModal";
+
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const stats = [
 	{ value: "5 LPA", label: "Average Package", top: false },
@@ -14,12 +20,66 @@ const stats = [
 const PlacementPage = () => {
 
 	const [showModal, setShowModal] = useState(false);
+
+	const container = useRef();
+
+	useGSAP(() => {
+
+		// heading animation
+		gsap.from(".placement-heading", {
+			y: 80,
+			opacity: 0,
+			duration: 1,
+			ease: "power3.out",
+		});
+
+		// stats animation
+		gsap.from(".stat-card", {
+			y: 80,
+			opacity: 0,
+			duration: 1,
+			stagger: 0.2,
+			ease: "power3.out",
+			scrollTrigger: {
+				trigger: ".stats-container",
+				start: "top 80%",
+			},
+		});
+
+		// slider animation
+		gsap.from(".placement-slider", {
+			y: 100,
+			opacity: 0,
+			duration: 1.2,
+			ease: "power3.out",
+			scrollTrigger: {
+				trigger: ".placement-slider",
+				start: "top 80%",
+			},
+		});
+
+		// bottom section animation
+		gsap.from(".placement-bottom", {
+			y: 100,
+			opacity: 0,
+			duration: 1,
+			ease: "power3.out",
+			scrollTrigger: {
+				trigger: ".placement-bottom",
+				start: "top 80%",
+			},
+		});
+
+	}, { scope: container });
 	
 	return (
-		<section className="w-full bg-black text-white py-24 px-6">
+		<section 
+			ref={container}
+			className="w-full bg-black text-white py-24 px-6"
+		>
 
 			{/* Heading */}
-			<div className="text-center mb-24 max-w-5xl mx-auto">
+			<div className="placement-heading text-center mb-24 max-w-5xl mx-auto">
 				<h1 className="text-4xl md:text-5xl font-[NeueMachina] leading-tight mt-24">
 					Your Next Big <span className="text-amber-500">Opportunity</span> Starts Here.
 				</h1>
@@ -30,9 +90,12 @@ const PlacementPage = () => {
 			</div>
 
 			{/* Zig Zag Stats */}
-			<div className="max-w-7xl mx-auto flex flex-wrap justify-center items-end gap-10">
+			<div className="stats-container max-w-7xl mx-auto flex flex-wrap justify-center items-end gap-10">
 				{stats.map((item, index) => (
-					<div key={index} className={`${item.top ? "md:-translate-y-12" : ""}`}>
+					<div 
+						key={index} 
+						className={`stat-card ${item.top ? "md:-translate-y-12" : ""}`}
+					>
 						<div className="
 							w-[200px] h-[190px] md:w-[200px] md:h-[180px]
 							rounded-xl border border-white/80
@@ -56,9 +119,12 @@ const PlacementPage = () => {
 				))}
 			</div>
 			
-			<PlacementSlider />
+			<div className="placement-slider">
+				<PlacementSlider />
+			</div>
+			
 
-			<div className="max-w-5xl mx-auto text-center my-24">
+			<div className="placement-bottom max-w-5xl mx-auto text-center my-24">
 				<h1 className="text-amber-500 text-4xl md:text-5xl font-[NeueMachina] leading-tight">
 					Tech has no background requirement — only a Learning Mindset.
 				</h1>
