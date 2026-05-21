@@ -31,13 +31,7 @@ const AboutPage = () => {
 				</h1>
 
 				<p className="mt-8 text-lg md:text-2xl text-white/70 leading-relaxed font-[Manrope] max-w-5xl mx-auto">
-					CODEMOS is more than just a training institute — it is a launchpad for
-					future developers. We focus on Practical Learning, Industry-relevant
-					Skills, Real-world Projects, Mock Interviews and Placement-oriented
-					Training that transforms beginners into confident professionals.
-					Whether you're from a technical background or starting fresh, CODEMOS
-					provides the right mentorship, roadmap, and environment to help you
-					build your career in tech.
+					CODEMOS is more than just a training institute — it’s a launchpad for future developers. With 10+ years of experience, we focus on Practical Learning, Real-World Projects, Mock Interviews and Industry-Ready Training to help students build successful careers in IT.
 				</p>
 			</div>
 
@@ -132,12 +126,11 @@ const AboutPage = () => {
 					Your Journey Starts <span className="text-amber-500">Here</span>
 				</h2>
 
-				<p className="mt-5 text-white/70 text-lg md:text-xl max-w-5xl mx-auto leading-relaxed">
-					Join CODEMOS, learn modern technologies, build real projects,
-					and shape your future with confidence.
+				<p className="mt-5 font-[Manrope] text-white/70 text-lg md:text-2xl max-w-5xl mx-auto leading-relaxed">
+					At CODEMOS, instead of just teaching technologies — we help students gain Real-World Skills, Build Powerful Projects and become confident developers ready for the modern tech industry.
 				</p>
 
-				<button
+				<button 
                     onClick={() => setShowModal(true)}
                     className="mt-20 px-8 py-3 rounded-lg bg-amber-500 text-black text-lg md:text-xl font-[NeueMachina] font-semibold cursor-pointer transition-all duration-300 hover:scale-105"
                 >
