@@ -122,8 +122,8 @@ const AboutPage = () => {
 
 			{/* Bottom CTA */}
 			<div className="text-center mt-28">
-				<h2 className="text-3xl md:text-5xl font-[NeueMachina] leading-tight">
-					Your Journey Starts <span className="text-amber-500">Here</span>
+				<h2 className="text-3xl md:text-5xl font-[NeueMachina] leading-tight text-amber-500">
+					Your Journey Starts Here
 				</h2>
 
 				<p className="mt-5 font-[Manrope] text-white/70 text-lg md:text-2xl max-w-5xl mx-auto leading-relaxed">

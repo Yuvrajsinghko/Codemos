@@ -1,9 +1,11 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
+import {useNavigate} from "react-router-dom";
 
 const Courses = () => {
 	const container = useRef();
+	const navigate = useNavigate();
 
 	useGSAP(() => {
 		gsap.killTweensOf(".course-heading, .course-card");
@@ -128,7 +130,11 @@ const Courses = () => {
 								{course.desc}
 							</p>
 
-							<button className="px-6 py-2 mt-2 bg-amber-500 text-black rounded-lg text-md font-semibold hover:bg-amber-400 transition duration-200">
+							<button
+								onClick={() => navigate("/courses")}
+								className="px-6 py-2 mt-2 bg-amber-500 text-black rounded-lg text-md font-semibold
+										hover:bg-amber-400 transition duration-200"
+							>
 								Explore
 							</button>
 						</div>
