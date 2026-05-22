@@ -16,7 +16,7 @@ const Footer = () => {
 
 				{/* Brand */}
 				<div>
-					<h2 className="text-3xl font-[NeueMachina] font-bold text-amber-500">
+					<h2 className="text-3xl font-[Manrope] font-bold text-amber-500">
 						CODEMOS
 					</h2>
 
@@ -36,7 +36,7 @@ const Footer = () => {
 
 				{/* Links */}
 				<div>
-					<h3 className="text-xl font-semibold mb-5 text-amber-500">
+					<h3 className="text-xl font-[Manrope] font-semibold mb-5 text-amber-500">
 						Quick Links
 					</h3>
 
@@ -50,7 +50,7 @@ const Footer = () => {
 
 				{/* Contact */}
 				<div>
-					<h3 className="text-xl font-semibold mb-5 text-amber-500">
+					<h3 className="text-xl font-[Manrope] font-semibold mb-5 text-amber-500">
 						Contact
 					</h3>
 
@@ -80,7 +80,7 @@ const Footer = () => {
 
 				{/* Map */}
 				<div>
-					<h3 className="text-xl font-semibold mb-5 text-amber-500">
+					<h3 className="text-xl font-[Manrope] font-semibold mb-5 text-amber-500">
 						Find Us
 					</h3>
 
