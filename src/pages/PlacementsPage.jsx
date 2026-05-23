@@ -29,7 +29,8 @@ const PlacementPage = () => {
 		gsap.from(".placement-heading", {
 			y: 80,
 			opacity: 0,
-			duration: 1,
+			scale: 0.95,
+			duration: 1.5,
 			ease: "power3.out",
 		});
 

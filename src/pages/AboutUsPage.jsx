@@ -1,6 +1,12 @@
 import { FaLinkedinIn, FaInstagram, FaYoutube } from "react-icons/fa";
 import { useState } from "react";
 import CallbackModal from "../components/CallbackModal";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const mentors = [
 	{
@@ -21,17 +27,96 @@ const AboutPage = () => {
 
     const [showModal, setShowModal] = useState(false);
 
+    const container = useRef();
+
+    useGSAP(() => {
+
+        // ABOUT HEADING
+        gsap.from(".about-heading", {
+            y: 80,
+            opacity: 0,
+            scale: 0.95,
+            duration: 1.5,
+            ease: "power3.out",
+        });
+
+        // ABOUT TEXT
+        gsap.from(".about-text", {
+            y: 80,
+            opacity: 0,
+
+            scrollTrigger: {
+                trigger: ".about-text",
+                start: "top 85%",
+                end: "top 40%",
+                scrub: 2,
+            },
+        });
+
+        // MENTOR SECTION
+        gsap.from(".mentor-heading", {
+            y: 100,
+            opacity: 0,
+
+            scrollTrigger: {
+                trigger: ".mentor-heading",
+                start: "top 85%",
+                end: "top 40%",
+                scrub: 2,
+            },
+        });
+
+        // MENTOR CARDS
+        gsap.utils.toArray(".mentor-card").forEach((card, index) => {
+
+            gsap.from(card, {
+                y: 80,
+                opacity: 0,
+                scale: 0.9,
+                duration: 1.2,
+                ease: "power3.out",
+
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 88%",
+                    toggleActions: "play reverse play reverse",
+                },
+            });
+        });
+
+        // BOTTOM CTA
+        gsap.from(".bottom-cta", {
+            y: 100,
+            opacity: 0,
+            scale: 0.95,
+
+            scrollTrigger: {
+                trigger: ".bottom-cta",
+                start: "top 85%",
+                end: "top 40%",
+                scrub: 2,
+            },
+        });
+
+    }, { scope: container });
+
 	return (
-		<section className="w-full bg-black text-white px-6 py-24">
+		<section 
+            ref={container}
+            className="w-full bg-black text-white px-6 py-24"
+        >
 
 			{/* Heading */}
-			<div className="max-w-6xl mx-auto text-center pt-24">
+			<div className="about-heading max-w-6xl mx-auto text-center pt-24">
 				<h1 className="text-4xl md:text-5xl font-[NeueMachina] leading-tight">
 					About <span className="text-amber-500">CODEMOS</span>
 				</h1>
 
-				<p className="mt-8 text-lg md:text-2xl text-white/70 leading-relaxed font-[Manrope] max-w-5xl mx-auto">
-					CODEMOS is more than just a training institute — it’s a launchpad for future developers. With 10+ years of experience, we focus on Practical Learning, Real-World Projects, Mock Interviews and Industry-Ready Training to help students build successful careers in IT.
+				<p className="about-text mt-8 text-lg md:text-2xl text-white/70 leading-relaxed font-[Manrope] max-w-6xl mx-auto">
+					CODEMOS is more than just a Training Institute — it’s a launchpad for ambitious future developers who want to build successful careers in the Tech Industry. With 10+ years of experience, we focus on Practical Learning, Real-World Projects, Mock Interviews, Internship Exposure and Industry-Ready Training designed to transform beginners into confident professionals.
+                    <br />
+                    <br />
+                    At CODEMOS, students don’t just learn technologies — they gain hands-on experience, build powerful projects, improve problem-solving skills and understand how real development teams work in the corporate world. Our mentorship-driven approach, supportive environment and career-focused roadmap help students become job-ready developers equipped with the confidence, skills and mindset required to thrive in today’s fast-growing IT industry.
 				</p>
 			</div>
 
@@ -39,33 +124,33 @@ const AboutPage = () => {
 			<div className="max-w-4xl mx-auto h-[1px] bg-white/10 my-24" />
 
 			{/* Mentors Heading */}
-			<div className="text-center mb-20">
-				<h2 className="text-4xl md:text-5xl font-[NeueMachina]">
+			<div className="mentor-heading text-center mb-20">
+				<h2 className="about-right text-4xl md:text-5xl font-[NeueMachina]">
 					Meet Our <span className="text-amber-500">Mentors</span>
 				</h2>
 
 				<p className="mt-4 text-white/60 text-lg md:text-xl font-[Manrope]">
-					Learn from experienced professionals who guide you at every step.
+					Learn from Industry Experts who mentor, support and prepare you to confidently succeed in the real Tech Industry.
 				</p>
 			</div>
 
 			{/* Mentor Cards */}
-			<div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10">
+			<div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-15">
 
 				{mentors.map((mentor, index) => (
 					<div
 						key={index}
 						className="
+                            mentor-card
 							group
 							bg-white/5
-							border border-white/20
+							border border-white/80
 							rounded-3xl
 							p-8
 							backdrop-blur-lg
-							transition duration-300
 							hover:border-amber-500
-							hover:-translate-y-2
-							hover:shadow-[0_0_30px_rgba(251,191,36,0.18)]
+							hover:shadow-[5px_5px_25px_rgba(251,191,36,0.25)]
+                            shadow-amber-500
 						"
 					>
 						<div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
@@ -121,7 +206,7 @@ const AboutPage = () => {
 			</div>
 
 			{/* Bottom CTA */}
-			<div className="text-center mt-28">
+			<div className="bottom-cta text-center mt-28">
 				<h2 className="text-3xl md:text-5xl font-[NeueMachina] leading-tight text-amber-500">
 					Your Journey Starts Here
 				</h2>
