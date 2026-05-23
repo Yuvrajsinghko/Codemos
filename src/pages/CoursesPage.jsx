@@ -56,13 +56,11 @@ const CoursesPage = () => {
 	useGSAP(() => {
 		// heading animation
 		gsap.from(".course-page-heading", {
-			y: 50,
+			y: 80,
 			opacity: 0,
-			duration: 0.8,
-			scrollTrigger: {
-				trigger: ".course-page-heading",
-				start: "top 80%",
-			},
+			scale: 0.95,
+			duration: 1.5,
+			ease: "power3.out"
 		});
 
 		// card animations
