@@ -35,39 +35,45 @@ const PlacementPage = () => {
 		});
 
 		// stats animation
-		gsap.from(".stat-card", {
-			y: 80,
-			opacity: 0,
-			duration: 1,
-			stagger: 0.2,
-			ease: "power3.out",
-			scrollTrigger: {
-				trigger: ".stats-container",
-				start: "top 80%",
-			},
+		gsap.from(".stat-card", { 
+			y: 80, 
+			opacity: 0, 
+			duration: 1, 
+			stagger: 0.2, 
+			ease: "power3.out", 
+			scrollTrigger: { 
+				trigger: ".stats-container", 
+				start: "top 80%", 
+			}, 
 		});
 
 		// slider animation
 		gsap.from(".placement-slider", {
-			y: 100,
+			y: 120,
 			opacity: 0,
-			duration: 1.2,
+			scale: 0.97,
 			ease: "power3.out",
+
 			scrollTrigger: {
 				trigger: ".placement-slider",
-				start: "top 80%",
+				start: "top 85%",
+				end: "top 35%",
+				scrub: 2,
 			},
 		});
 
 		// bottom section animation
 		gsap.from(".placement-bottom", {
-			y: 100,
+			y: 120,
 			opacity: 0,
-			duration: 1,
+			scale: 0.95,
 			ease: "power3.out",
+
 			scrollTrigger: {
 				trigger: ".placement-bottom",
-				start: "top 80%",
+				start: "top 85%",
+				end: "top 35%",
+				scrub: 2,
 			},
 		});
 
