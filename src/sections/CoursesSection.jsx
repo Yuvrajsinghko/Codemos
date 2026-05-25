@@ -101,7 +101,7 @@ const Courses = () => {
 		<section id="courses" ref={container} className="w-full bg-black text-white px-6 py-28">
 
 			<div className="text-center mb-20">
-				<h2 className="course-heading text-5xl md:text-6xl font-[NeueMachina]">
+				<h2 className="course-heading text-5xl font-[NeueMachina]">
 					Explore Our <span className="text-amber-500">Courses</span>
 				</h2>
 				<p className="course-heading text-2xl mt-4 text-white/60 max-w-4xl mx-auto">
@@ -114,7 +114,7 @@ const Courses = () => {
 				{courses.map((course, index) => (
 					<div
 						key={index}
-						className="course-card group relative h-[170px] rounded-2xl border border-white/60 bg-white/5 backdrop-blur-lg overflow-hidden cursor-pointer flex items-center justify-center text-center px-6 transition duration-300 hover:-translate-y-2 hover:bg-white/10"
+						className="course-card group relative h-[150px] rounded-2xl border border-white/60 bg-white/5 backdrop-blur-lg overflow-hidden cursor-pointer flex items-center justify-center text-center px-6 transition duration-300 hover:-translate-y-2 hover:bg-white/10"
 						onMouseEnter={(e) => handleEnter(e.currentTarget)}
 						onMouseLeave={(e) => handleLeave(e.currentTarget)}
 					>
