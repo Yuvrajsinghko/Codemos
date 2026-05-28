@@ -8,12 +8,32 @@ const Courses = () => {
 	const navigate = useNavigate();
 
 	useGSAP(() => {
-		gsap.killTweensOf(".course-heading, .course-card");
+		gsap.from(".course-heading", {
+		x: -80,
+		opacity: 0,
+		stagger: 0.2,
+		ease: "power2.out",
+		scrollTrigger: {
+			trigger: ".course-heading",
+			start: "top 80%",
+			end: "top 20%",
+			scrub: 3,
+		},
+		});
 
-		gsap.fromTo(".course-heading",
-			{ y: 40, opacity: 0 },
-			{ y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }
-		);
+		gsap.from(".course-heading2", {
+		x: 80,
+		opacity: 0,
+		stagger: 0.2,
+		ease: "power2.out",
+		scrollTrigger: {
+			trigger: ".course-heading2",
+			start: "top 80%",
+			end: "top 20%",
+			scrub: 3,
+		},
+		});
+
 
 		gsap.fromTo(".course-card",
 			{ y: 40, opacity: 0 },
@@ -104,7 +124,7 @@ const Courses = () => {
 				<h2 className="course-heading text-5xl font-[NeueMachina]">
 					Explore Our <span className="text-amber-500">Courses</span>
 				</h2>
-				<p className="course-heading text-2xl mt-4 text-white/60 max-w-4xl mx-auto">
+				<p className="course-heading2 text-2xl mt-4 text-white/60 max-w-4xl mx-auto">
 					Master in-demand skills and become industry-ready with structured learning paths.
 				</p>
 			</div>
