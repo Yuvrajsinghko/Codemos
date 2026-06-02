@@ -8,27 +8,27 @@ gsap.registerPlugin(ScrollTrigger);
 
 //  Reusable Card (same for ALL)
 const CourseCard = ({ course, openModal }) => (
-	<div className=" course-page-card group w-full bg-white/5 border border-white/80 rounded-2xl px-5 py-6
+	<div className=" course-page-card group w-full bg-white/5 border border-white/80 rounded-xl md:rounded-2xl px-4 sm:px-5 md:px-6 py-5 md:py-6
 		backdrop-blur-lg hover:shadow-[5px_5px_25px_rgba(251,191,36,0.25)] shadow-amber-500 hover:border-amber-500 hover:bg-white/5 ">
 		
-		<div className="h-16 flex items-center justify-center text-center mb-6 border-b-2 border-white/40">
-			<h3 className="text-2xl md:text-3xl font-semibold mb-3 w-full font-[NeueMachina] duration-300 group-hover:text-amber-500">
+		<div className="h-14 sm:h-16 flex items-center justify-center text-center mb-4 md:mb-6 border-b-2 border-white/40">
+			<h3 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-semibold mb-3 w-full font-[NeueMachina] duration-300 group-hover:text-amber-500">
 				{course.title}
 			</h3>
 		</div>
 
 		{/* Content */}
-		<div className="flex flex-col md:flex-row gap-10 justify-center px-1">
-			<div className="w-full md:w-1/2 border border-white/80 rounded-xl">
+		<div className="flex flex-col md:flex-row gap-5 md:gap-8 lg:gap-10 justify-center px-1">
+			<div className="w-full md:w-1/2 border border-white/80 rounded-xl overflow-hidden">
 				<img
 					src={course.img}
 					alt={course.title}
-					className="w-full h-full object-cover rounded-xl aspect-[3/4]"
+					className="w-full object-cover rounded-xl aspect-[4/3] md:aspect-[3/4]"
 				/>
 			</div>
 
 			<div className="w-full md:w-1/2 flex flex-col justify-evenly">
-				<ul className="text-white/70 text-sm md:text-base mb- space-y-2 leading-relaxed ">
+				<ul className="text-white/70 text-sm sm:text-base space-y-2 leading-relaxed ">
 					{course.points.map((point, i) => (
 						<li key={i}>•{point}</li>
 					))}
@@ -36,7 +36,7 @@ const CourseCard = ({ course, openModal }) => (
 
 				<button 
 					onClick={openModal}
-					className="mt-6 w-fit px-7 py-3 text-lg bg-amber-500 text-black rounded-lg font-semibold hover:bg-amber-400 transition duration-300 group-hover:-translate-y-1"
+					className="mt-5 md:mt-6 w-full sm:w-fit px-6 md:px-7 py-3 text-base md:text-lg bg-amber-500 text-black rounded-lg font-semibold hover:bg-amber-400 transition duration-300 group-hover:-translate-y-1"
 				>
 					Know More
 				</button>				
@@ -166,21 +166,21 @@ const CoursesPage = () => {
 	return (
 		<section 
 			ref={container}
-			className="w-full bg-black text-white py-24 px-6"
+			className="w-full bg-black text-white py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8"
 		>
 
 			<div className="text-center mb-20 max-w-5xl mx-auto course-page-heading">
-				<h1 className="mt-24 text-4xl md:text-5xl font-[NeueMachina] leading-tight">
+				<h1 className="mt-16 md:mt-24 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-[NeueMachina] leading-tight">
 					Level Up Your <span className="text-amber-500">Coding Skills</span>
 				</h1>
 
-				<p className="mt-2 mb-24 text-lg md:text-2xl text-white/70 font-[Manrope]">
+				<p className="mt-3 mb-16 md:mb-24 text-base sm:text-lg md:text-xl lg:text-2xl text-white/70 font-[Manrope] px-2">
 					"Expert-led programs designed to make you industry-ready from day one."
 				</p>
 			</div>
 
 
-			<div className="courses-grid grid grid-cols-1 md:grid-cols-2 gap-15 max-w-7xl mx-auto">
+			<div className="courses-grid grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 lg:gap-12 max-w-7xl mx-auto">
 				{courses.map((course, index) => (
 					<CourseCard key={index} course={course} openModal={() => setShowModal(true)}/>
 				))}
