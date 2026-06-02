@@ -8,8 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 //  Reusable Card (same for ALL)
 const CourseCard = ({ course, openModal }) => (
-	<div className=" course-page-card group w-full bg-white/5 border border-white/80 rounded-xl md:rounded-2xl px-4 sm:px-5 md:px-6 py-5 md:py-6
-		backdrop-blur-lg hover:shadow-[5px_5px_25px_rgba(251,191,36,0.25)] shadow-amber-500 hover:border-amber-500 hover:bg-white/5 ">
+	<div className=" course-page-card group w-[92%] sm:w-full bg-white/5 border border-white/80 rounded-xl md:rounded-2xl mx-auto px-4 sm:px-5 md:px-6 py-5 md:py-6 backdrop-blur-lg hover:shadow-[5px_5px_25px_rgba(251,191,36,0.25)] shadow-amber-500 hover:border-amber-500 hover:bg-white/5">
 		
 		<div className="h-14 sm:h-16 flex items-center justify-center text-center mb-4 md:mb-6 border-b-2 border-white/40">
 			<h3 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-semibold mb-3 w-full font-[NeueMachina] duration-300 group-hover:text-amber-500">
@@ -18,17 +17,17 @@ const CourseCard = ({ course, openModal }) => (
 		</div>
 
 		{/* Content */}
-		<div className="flex flex-col md:flex-row gap-5 md:gap-8 lg:gap-10 justify-center px-1">
-			<div className="w-full md:w-1/2 border border-white/80 rounded-xl overflow-hidden">
+		<div className="flex flex-col lg:flex-row gap-5 md:gap-8 lg:gap-10 justify-center mt-3 px-1">
+			<div className="w-[95%] lg:w-1/2 mx-auto border border-white/80 rounded-xl overflow-hidden">
 				<img
 					src={course.img}
 					alt={course.title}
-					className="w-full object-cover rounded-xl aspect-[4/3] md:aspect-[3/4]"
+					className="w-full object-cover rounded-xl h-48 sm:h-64 lg:h-auto aspect-[4/3] md:aspect-[3/4]"
 				/>
 			</div>
 
-			<div className="w-full md:w-1/2 flex flex-col justify-evenly">
-				<ul className="text-white/70 text-sm sm:text-base space-y-2 leading-relaxed ">
+			<div className="w-full lg:w-1/2 flex flex-col justify-evenly">
+				<ul className="text-white/70 text-[15px] sm:text-base md:text-lg space-y-2 leading-relaxed ">
 					{course.points.map((point, i) => (
 						<li key={i}>•{point}</li>
 					))}
@@ -36,7 +35,7 @@ const CourseCard = ({ course, openModal }) => (
 
 				<button 
 					onClick={openModal}
-					className="mt-5 md:mt-6 w-full sm:w-fit px-6 md:px-7 py-3 text-base md:text-lg bg-amber-500 text-black rounded-lg font-semibold hover:bg-amber-400 transition duration-300 group-hover:-translate-y-1"
+					className="mt-5 md:mt-6 w-full lg:w-fit mx-auto lg:mx-0 px-6 md:px-7 py-3 text-base md:text-lg bg-amber-500 text-black rounded-lg font-semibold hover:bg-amber-400 transition duration-300 group-hover:-translate-y-1"
 				>
 					Know More
 				</button>				
@@ -68,13 +67,16 @@ const CoursesPage = () => {
 
 		cards.forEach((card, index) => {
 			gsap.from(card, {
-				y:80,
+				y:120,
 				opacity: 0,
 				duration: 1.5,
-				ease: "power2.out",
+				ease: "power3.out",
+				
 				scrollTrigger: {
 					trigger: card,
 					start: "top 85%",
+					end: "top 40%",
+					scrub: 2,
 				},
 			});
 		});
