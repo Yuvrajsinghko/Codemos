@@ -40,7 +40,7 @@ const AboutPage = () => {
             ease: "power3.out",
         });
 
-        // ABOUT TEXT
+        // About section reveal on scroll
         gsap.from(".about-text", {
             y: 80,
             opacity: 0,
@@ -53,7 +53,7 @@ const AboutPage = () => {
             },
         });
 
-        // MENTOR SECTION
+        // Mentors section heading animation
         gsap.from(".mentor-heading", {
             y: 100,
             opacity: 0,
@@ -66,7 +66,7 @@ const AboutPage = () => {
             },
         });
 
-        // MENTOR CARDS
+        // Individual mentor card animations
         gsap.utils.toArray(".mentor-card").forEach((card, index) => {
 
             gsap.from(card, {
@@ -84,7 +84,7 @@ const AboutPage = () => {
             });
         });
 
-        // BOTTOM CTA
+        // Call-to-action section animation
         gsap.from(".bottom-cta", {
             y: 100,
             opacity: 0,
