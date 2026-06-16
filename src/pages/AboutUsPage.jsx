@@ -10,14 +10,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 const mentors = [
 	{
-		name: "Mentor Name 1",
-		role: "Senior Full Stack Developer",
+		name: "Sunny Raikwar",
+		role: "Data Science & AI Mentor",
 		img: "/images/mentors/mentor1.jpg",
 		desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, doloremque. Eligendi molestiae, repellendus porro necessitatibus deserunt accusamus autem asperiores ullam.",
 	},
 	{
-		name: "Mentor Name 2",
-		role: "Data Science & AI Mentor",
+		name: "Pulkit Vaishnav",
+		role: "Senior Full Stack Developer",
 		img: "/images/mentors/mentor2.jpg",
 		desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, doloremque. Eligendi molestiae, repellendus porro necessitatibus deserunt accusamus autem asperiores ullam.",
 	},
