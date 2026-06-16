@@ -1,9 +1,15 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
+import {useNavigate} from "react-router-dom";
 
 const Placements = () => {
 
+	const handleCardClick = () => {
+		navigate("/placements");
+	};
+
+	const navigate = useNavigate();
 	// these refs are used to target the DOM elements
 	const row1Ref = useRef();
 	const row2Ref = useRef();
@@ -129,8 +135,11 @@ const Placements = () => {
 	}
 
 	// single card component
-	const Card = ({ item }) => (
-		<div className="group min-w-[250px] bg-white/5 border border-white/80 rounded-2xl p-6 flex flex-col items-center text-center transition duration-300 hover:-translate-y-2 hover:shadow-[5px_5px_25px_rgba(251,191,36,0.25)] shadow-amber-500 hover:border-amber-500 ">
+	const Card = ({ item, onCardClick }) => (
+		<div 
+			onClick={onCardClick}
+			className="group min-w-[250px] bg-white/5 border border-white/80 rounded-2xl p-6 flex flex-col items-center text-center transition duration-300 hover:-translate-y-2 hover:shadow-[5px_5px_25px_rgba(251,191,36,0.25)] shadow-amber-500 hover:border-amber-500 "
+		>
 
             <div className="flex items-center gap-4 mb-6 border-b border-white/60">
                 <p className="text-md text-white/60 transition duration-300 group-hover:scale-110 group-hover:text-amber-500">Placed at</p>
@@ -145,7 +154,7 @@ const Placements = () => {
 			<img
                 src={item.img}
                 alt={item.name}
-                className="w-35 h-35 rounded-full object-cover  border-none"
+                className="w-35 h-35 rounded-full object-cover border-none"
             />
 
 			<div className="mt-6 text-center">
@@ -172,7 +181,11 @@ const Placements = () => {
 			>
 				<div ref={row1Ref} className="flex gap-8 w-max">
 					{loopRow1.map((item, index) => (
-						<Card key={index} item={item} />
+						<Card 
+							key={index} 
+							item={item} 
+							onCardClick={handleCardClick}
+						/>
 					))}
 				</div>
 			</div>
@@ -184,13 +197,20 @@ const Placements = () => {
 			>
 				<div ref={row2Ref} className="flex gap-8 w-max">
 					{loopRow2.map((item, index) => (
-						<Card key={index} item={item} />
+						<Card 
+							key={index} 
+							item={item} 
+							onCardClick={handleCardClick}
+						/>
 					))}
 				</div>
 			</div>
 
-			<div className="flex justify-center mt-16">
-				<button className="px-10 py-3 bg-amber-500 text-black rounded-full font-semibold hover:bg-amber-400 transition">
+			<div className="flex justify-center mt-24">
+				<button 
+					onClick={()=>navigate("/placements")}
+					className="bg-amber-500 text-lg md:text-xl text-black px-8 py-3 rounded-lg font-[NeueMachina] font-bold cursor-pointer transition-all duration-300 hover:scale-105"
+				>
 					Know More
 				</button>
 			</div>
