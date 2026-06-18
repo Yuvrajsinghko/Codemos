@@ -10,11 +10,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const stats = [
-	{ value: "5 LPA", label: "Average Package", top: false },
-	{ value: "200+", label: "Students Trained & Placed", top: true },
-	{ value: "20 LPA", label: "Highest Package", top: false },
-	{ value: "4.2 / 5", label: "Student Rating", top: true },
-	{ value: "100%", label: "Placements", top: false },
+	{ value: "5", suffix: "LPA", label: "Average Package", top: false },
+	{ value: "200", suffix: "+", label: "Students Trained & Placed", top: true },
+	{ value: "20", suffix: "LPA", label: "Highest Package", top: false },
+	{ value: "4.2", suffix: " / 5", label: "Student Rating", top: true },
+	{ value: "100", suffix: "%", label: "Placements", top: false },
 ];
 
 const PlacementPage = () => {
@@ -45,6 +45,23 @@ const PlacementPage = () => {
 				trigger: ".stats-container", 
 				start: "top 80%", 
 			}, 
+		});
+
+		// Counter animation
+		gsap.utils.toArray(".stat-number").forEach((counter, index) => {
+			gsap.from(counter, {
+				innerText: 0,
+				duration: 3,
+				snap: {
+					innerText: stats[index].value % 1 ? 0.1 : 1,
+				},
+
+				scrollTrigger: {
+					trigger: counter,
+					start: "top 80%",
+					toggleActions: "play none none none",
+				},
+			});
 		});
 
 		// slider animation
@@ -115,7 +132,8 @@ const PlacementPage = () => {
 							hover:shadow-[5px_5px_25px_rgba(251,191,36,0.2)] shadow-amber-500"
 						>
 							<h2 className="text-3xl md:text-4xl font-bold font-[NeueMachina] text-amber-500">
-								{item.value}
+								<span className="stat-number">{item.value}</span>
+								{item.suffix}
 							</h2>
 
 							<p className="mt-2 text-white/75 text-base md:text-xl font-[Manrope]">

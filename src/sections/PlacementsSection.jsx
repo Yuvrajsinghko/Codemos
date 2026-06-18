@@ -138,7 +138,7 @@ const Placements = () => {
 	const Card = ({ item, onCardClick }) => (
 		<div 
 			onClick={onCardClick}
-			className="group min-w-[250px] bg-white/5 border border-white/80 rounded-2xl p-6 flex flex-col items-center text-center transition duration-300 hover:-translate-y-2 hover:shadow-[5px_5px_25px_rgba(251,191,36,0.25)] shadow-amber-500 hover:border-amber-500 "
+			className="group min-w-[250px] bg-white/5 border border-white/80 rounded-2xl p-6 flex flex-col items-center text-center transition duration-300 hover:-translate-y-2 hover:shadow-[5px_5px_25px_rgba(251,191,36,0.25)] shadow-amber-500 hover:border-amber-500 cursor-pointer "
 		>
 
             <div className="flex items-center gap-4 mb-6 border-b border-white/60">
