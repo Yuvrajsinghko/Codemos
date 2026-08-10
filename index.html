@@ -1,13 +1,45 @@
+```html
 <!doctype html>
+<!-- Tells the browser that this document uses HTML5 -->
+
 <html lang="en">
+  <!-- The root element of the HTML document -->
+  <!-- lang="en" tells the browser that the page content is in English -->
+
   <head>
+    <!-- Contains information about the webpage that is not directly displayed -->
+
     <meta charset="UTF-8" />
+    <!-- Sets the character encoding to UTF-8 -->
+    <!-- This allows the page to correctly display characters and symbols -->
+
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- Sets the small icon (favicon) that appears in the browser tab -->
+    <!-- Here, the favicon is the default Vite logo -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the webpage responsive on different screen sizes -->
+    <!-- width=device-width means the page width matches the device width -->
+    <!-- initial-scale=1.0 means the page starts at normal zoom -->
+
     <title>codemos</title>
+    <!-- Sets the title displayed in the browser tab -->
+
   </head>
+
   <body>
+    <!-- Contains the visible content of the webpage -->
+
     <div id="root"></div>
+    <!-- React will use this div as the main container for the application -->
+    <!-- React components will be rendered inside this element -->
+
     <script type="module" src="/src/main.jsx"></script>
+    <!-- Loads the main React JavaScript file -->
+    <!-- type="module" allows JavaScript modules/imports to be used -->
+    <!-- main.jsx is the starting point of the React application -->
+
   </body>
 </html>
+<!-- End of the HTML document -->
+```
